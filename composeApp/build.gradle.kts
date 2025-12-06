@@ -49,7 +49,7 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             // Temporarily disabled - causes iOS linker issues
-            // implementation(libs.navigation.compose)
+            implementation(libs.navigation.compose)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
@@ -73,6 +73,7 @@ android {
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
+        multiDexEnabled = true
     }
     packaging {
         resources {
@@ -92,5 +93,6 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
+    implementation("androidx.multidex:multidex:2.0.1")
 }
 
