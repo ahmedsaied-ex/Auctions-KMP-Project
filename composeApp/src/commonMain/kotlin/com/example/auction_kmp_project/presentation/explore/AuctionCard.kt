@@ -9,6 +9,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun AuctionCard(){
     Card(
 
+
+
+        
     ) {  }
 
 }
