@@ -47,11 +47,17 @@ fun BottomNavBar(navController: NavController) {
                     Text(
                         item.label, style = if (isSelected) {
                             TextStyle(
-                                fontFamily = readexProFontFamily(), fontWeight = FontWeight.Light, color = PrimaryBlueColor, fontSize =BottomNavItemTextSize
+                                fontFamily = readexProFontFamily(),
+                                fontWeight = FontWeight.Medium,
+                                color = PrimaryBlueColor,
+                                fontSize = BottomNavItemTextSize
                             )
                         } else {
                             TextStyle(
-                                fontFamily = readexProFontFamily(), fontWeight = FontWeight.Medium, color = PrimaryBlueColor, fontSize = BottomNavItemTextSize
+                                fontFamily = readexProFontFamily(),
+                                fontWeight = FontWeight.Light,
+                                color = PrimaryBlueColor,
+                                fontSize = BottomNavItemTextSize
                             )
                         }
                     )
@@ -67,7 +73,7 @@ fun BottomNavBar(navController: NavController) {
                     }
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    indicatorColor = Color(0xffE0DDEA) // This is the selected item's background
+                    indicatorColor = Color(0xE6E0DDEA) // This is the selected item's background
                 ),
 
             )
