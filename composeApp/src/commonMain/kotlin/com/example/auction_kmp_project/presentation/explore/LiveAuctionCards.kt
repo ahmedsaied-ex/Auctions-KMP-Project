@@ -40,10 +40,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 fun LiveAuctionCardList() {
 
-
     LazyRow(
         modifier = Modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = 16.dp),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 10.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         items(2) { _ ->

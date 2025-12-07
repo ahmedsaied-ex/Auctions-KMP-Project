@@ -24,35 +24,48 @@ import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.auction_card_image_test
 import auctionkmpproject.composeapp.generated.resources.ic_home_calendar_auction_card
 import auctionkmpproject.composeapp.generated.resources.ic_items_auction_card
+import com.example.auction_kmp_project.ui.theme.BodyColor
+import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
 fun AuctionCard(
+    modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = Modifier.padding(top = 16.dp, end = 12.dp).fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         elevation = CardDefaults.cardElevation(0.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color.White
         )
     ) {
-        Row(modifier = Modifier.padding(20.dp).fillMaxWidth()) {
-            Column {
+        Row(modifier = modifier.padding(20.dp).fillMaxWidth()) {
+            Column(modifier = Modifier.width(80.dp)) {
                 Box(Modifier.size(80.dp)) {
                     Image(
                         painter = painterResource(Res.drawable.auction_card_image_test), // replace with your image
                         contentDescription = "Rounded Image",
                         modifier = Modifier.fillMaxSize()
-                            .clip(RoundedCornerShape(16.dp)),
+                            .clip(RoundedCornerShape(10.dp)),
                         contentScale = ContentScale.Crop
                     )
                 }
+                Spacer(modifier = Modifier.height(6.dp))
+                TimeCard(
+                    topBackground =Color(0xffE0DDEA) ,
+                    topTextColor = BodyColor,
+                    bottomTextColor = PrimaryBlueColor,
+                    bottomBackground = Color(0xffEBE9F1),
+                    topText = "Start in",
+                    bottomText = "4d 8h 49m"
+                )
             }
             Spacer(modifier = Modifier.width(12.dp))
             Column(modifier = Modifier.fillMaxWidth()) {
                 AuctionCardTitle(
+                    modifier = Modifier.fillMaxWidth(),
                     title = "Eshraqet Al Riyadh"
                 )
                 Spacer(modifier = Modifier.height(6.dp))

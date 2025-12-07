@@ -12,7 +12,7 @@ import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 
 
 @Composable
-fun AuctionCardTitle(title: String) {
+fun AuctionCardTitle(title: String,modifier: Modifier) {
     Text(
         title, style = TextStyle(
             fontFamily = readexProFontFamily(),

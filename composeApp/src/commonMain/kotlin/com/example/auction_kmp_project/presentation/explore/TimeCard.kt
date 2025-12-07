@@ -65,7 +65,6 @@ fun TimeCard(
                 color = bottomTextColor,
                 fontSize = 10.sp,
                 lineHeight = 10.sp,
-
                 fontWeight = FontWeight.SemiBold,
                 fontFamily = readexProFontFamily(),
             )
