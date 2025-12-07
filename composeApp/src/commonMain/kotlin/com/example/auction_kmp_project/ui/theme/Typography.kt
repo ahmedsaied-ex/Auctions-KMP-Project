@@ -13,7 +13,6 @@ import org.jetbrains.compose.resources.Font
 @Composable
 fun readexProFontFamily() = FontFamily(
     Font(Res.font.readex_pro_regular, FontWeight.Normal),
-    Font(Res.font.readex_pro_light, FontWeight.Light)
 )
 
 

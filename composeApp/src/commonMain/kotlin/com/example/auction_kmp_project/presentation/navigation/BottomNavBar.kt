@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.auction_kmp_project.helpers.BottomNavItemTextSize
+import com.example.auction_kmp_project.helpers.FontSizes.BottomNavItemTextSize
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource

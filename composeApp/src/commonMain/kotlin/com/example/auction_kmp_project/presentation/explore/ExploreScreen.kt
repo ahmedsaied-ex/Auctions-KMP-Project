@@ -14,5 +14,6 @@ import androidx.navigation.NavController
 fun ExploreScreen(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
-    ) { ExploreAppBar() }
+    ) { ExploreAppBar()
+        LiveAuctionCardList()}
 }
