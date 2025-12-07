@@ -6,6 +6,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.text.TextStyle
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import org.jetbrains.compose.resources.painterResource
@@ -27,7 +28,16 @@ fun BottomNavBar(navController: NavController) {
                         contentDescription = item.label
                     )
                 },
-                label = { Text(item.label) },
+                label = {
+                    Text(
+                        item.label, style = if (isSelected) {
+                            TextStyle(
+                            )
+                        } else {
+                            TextStyle()
+                        }
+                    )
+                },
                 selected = isSelected,
                 onClick = {
                     if (!isSelected) {
