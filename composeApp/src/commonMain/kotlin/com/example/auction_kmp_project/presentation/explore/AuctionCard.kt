@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -28,7 +29,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 @Preview
 fun AuctionCard() {
-    Card(modifier = Modifier.padding(horizontal = 6.dp).fillMaxWidth()) {
+    Card(modifier = Modifier.padding(horizontal = 6.dp, vertical = 5.dp).fillMaxWidth(),elevation = CardDefaults.cardElevation(0.dp)) {
         Row(modifier = Modifier.padding(20.dp).fillMaxWidth()) {
             Column {
                 Box(Modifier.size(80.dp)) {
@@ -58,11 +59,7 @@ fun AuctionCard() {
                 AuctionCardMinimumBid(
                     currencySymbol = "SR", moneyAmmount = "1,050,000"
                 )
-
-
             }
-
-
         }
     }
 }
