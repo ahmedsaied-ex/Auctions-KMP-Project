@@ -24,16 +24,3 @@ fun MainNavHost(navController: NavHostController, modifier: Modifier = Modifier)
         composable(MainGraphRoutes.Profile.route) { ProfileScreen(navController) }
     }
 }
-
-@Composable
-fun NavHost(){
-    val navController = rememberNavController()
-    NavHost(
-        navController = navController,
-        startDestination = MainGraphRoutes.Graph
-    ) {
-        mainGraph(navController)
-    }
-
-}
-
