@@ -24,100 +24,98 @@ import com.example.auction_kmp_project.ui.theme.LiveAuctionCardBidTextColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 
 @Composable
-fun BidPart(modifier: Modifier ) {
-    Row(modifier) {
-        Column(
-            modifier = Modifier.padding(horizontal = 8.dp),
-            verticalArrangement = Arrangement.Center
+fun BidPart() {
+    Column(
+        modifier = Modifier.padding(horizontal = 8.dp),
+        verticalArrangement = Arrangement.Center
+    ) {
+        Box(
+            modifier = Modifier.width(76.dp).height(19.dp)
+                .background(DeletedColor, shape = RoundedCornerShape(20.dp)),
+            contentAlignment = Alignment.Center
+
+
         ) {
-            Box(
-                modifier = Modifier.width(76.dp).height(19.dp)
-                    .background(DeletedColor, shape = RoundedCornerShape(20.dp)),
-                contentAlignment = Alignment.Center
-
-
-            ) {
-                Text(
-                    text = "Live bidding",
-                    color = Color.White,
-                    fontSize = 10.sp,
-                    lineHeight = 10.sp,
-
-                    fontFamily = readexProFontFamily(),
-                )
-            }
-
-
-            Spacer(modifier = Modifier.height(6.dp))
-
             Text(
-                text = "2021 Ford F-150",
-                lineHeight = 16.sp,
+                text = "Live bidding",
                 color = Color.White,
-                fontSize = 16.sp,
-                fontFamily = readexProFontFamily(),
-                fontWeight = FontWeight.Medium
-            )
-            Spacer(modifier = Modifier.height(6.dp))
-
-            Row {
-                Text(
-                    text = "Your bid: ",
-                    fontWeight = FontWeight.Light,
-
-                    color = BidStatusText,
-                    fontSize = 10.sp, lineHeight = 10.sp,
-                    fontFamily = readexProFontFamily(),
-
-                    )
-                Text(
-                    text = "SR 230,000",
-                    color = Color.White,
-                    fontSize = 10.sp, lineHeight = 10.sp,
-                    fontWeight = FontWeight.Normal,
-                    fontFamily = readexProFontFamily(),
-
-                    )
-            }
-
-
-            Spacer(modifier = Modifier.height(12.dp))
-
-            Text(
-                text = "Current bid",
-                color = BidStatusText,
                 fontSize = 10.sp,
                 lineHeight = 10.sp,
+
+                fontFamily = readexProFontFamily(),
+            )
+        }
+
+
+        Spacer(modifier = Modifier.height(6.dp))
+
+        Text(
+            text = "2021 Ford F-150",
+            lineHeight = 16.sp,
+            color = Color.White,
+            fontSize = 16.sp,
+            fontFamily = readexProFontFamily(),
+            fontWeight = FontWeight.Medium
+        )
+        Spacer(modifier = Modifier.height(6.dp))
+
+        Row {
+            Text(
+                text = "Your bid: ",
                 fontWeight = FontWeight.Light,
 
+                color = BidStatusText,
+                fontSize = 10.sp, lineHeight = 10.sp,
                 fontFamily = readexProFontFamily(),
 
                 )
-            Spacer(modifier = Modifier.height(2.dp))
+            Text(
+                text = "SR 230,000",
+                color = Color.White,
+                fontSize = 10.sp, lineHeight = 10.sp,
+                fontWeight = FontWeight.Normal,
+                fontFamily = readexProFontFamily(),
 
-            Row {
-                Text(
-                    text = "SR ",
-                    color = Color(0xFFF6BC9F),
-                    fontSize = 20.sp,
-                    lineHeight = 20.sp,
-
-                    fontWeight = FontWeight.Light
                 )
-                Text(
-                    text = "230,100",
-                    color = LiveAuctionCardBidTextColor,
-                    fontSize = 20.sp,
-                    lineHeight = 20.sp,
-
-                    fontWeight = FontWeight.Bold,
-                    fontFamily = readexProFontFamily(),
-
-                    )
-            }
+        }
 
 
-        }}
+        Spacer(modifier = Modifier.height(12.dp))
 
+        Text(
+            text = "Current bid",
+            color = BidStatusText,
+            fontSize = 10.sp,
+            lineHeight = 10.sp,
+            fontWeight = FontWeight.Light,
+
+            fontFamily = readexProFontFamily(),
+
+            )
+        Spacer(modifier = Modifier.height(2.dp))
+
+        Row {
+            Text(
+                text = "SR ",
+                color = Color(0xFFF6BC9F),
+                fontSize = 20.sp,
+                lineHeight = 20.sp,
+
+                fontWeight = FontWeight.Light
+            )
+            Text(
+                text = "230,100",
+                color = LiveAuctionCardBidTextColor,
+                fontSize = 20.sp,
+                lineHeight = 20.sp,
+
+                fontWeight = FontWeight.Bold,
+                fontFamily = readexProFontFamily(),
+
+                )
+        }
+
+
+    }
 }
 

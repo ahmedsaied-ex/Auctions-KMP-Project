@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -64,15 +63,16 @@ fun LiveAuctionCard() {
                     .padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Column() {
+                Column(modifier = Modifier.width(80.dp)) {
                     Box(
-                        modifier = Modifier.height(80.dp)
+                        modifier = Modifier
+                            .fillMaxWidth().height(80.dp)
                     ) {
                         Image(
                             painter = painterResource(Res.drawable.car),
                             contentDescription = "car",
                             contentScale = ContentScale.Crop,
-                            modifier = Modifier.size(80.dp).clip(RoundedCornerShape(10.dp))
+                            modifier = Modifier.fillMaxSize().clip(RoundedCornerShape(10.dp))
 
                         )
 
@@ -91,7 +91,7 @@ fun LiveAuctionCard() {
                     )
 
                 }
-                BidPart(modifier = Modifier.weight(1f))
+                BidPart()
 
 
             }
