@@ -18,6 +18,7 @@ import auctionkmpproject.composeapp.generated.resources.ic_filter_app_bar
 import auctionkmpproject.composeapp.generated.resources.ic_hide_name
 import auctionkmpproject.composeapp.generated.resources.ic_notification_app_bar
 import auctionkmpproject.composeapp.generated.resources.ic_search_app_bar
+import com.example.auction_kmp_project.helpers.FontSizes.AppBarExplorScreenTextSize
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
@@ -27,7 +28,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 fun ExploreAppBar() {
     Row(modifier = Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-        Text("Explore", fontSize = 20.sp, color = PrimaryBlueColor, fontFamily = readexProFontFamily(), fontWeight = FontWeight.SemiBold)
+        Text("Explore", fontSize = AppBarExplorScreenTextSize, color = PrimaryBlueColor, fontFamily = readexProFontFamily(), fontWeight = FontWeight.SemiBold)
         Row {
             Image(
                 painter = painterResource(Res.drawable.ic_search_app_bar),
