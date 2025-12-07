@@ -29,14 +29,15 @@ fun TimeCard(
     bottomText: String
 ) {
     Column(
-        modifier = Modifier.wrapContentHeight(), horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.wrapContentHeight()
     ) {
         Row(
-            modifier = Modifier.height(12.dp)
+            modifier = Modifier
+                .fillMaxWidth().height(12.dp)
                 .background(
                     topBackground,
                     shape = RoundedCornerShape(topStart = 6.dp, topEnd = 6.dp)
-                ).padding(horizontal = 26.dp, vertical = 1.dp),
+                ),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -51,11 +52,12 @@ fun TimeCard(
         }
 
         Row(
-            modifier = Modifier.height(18.dp)
+            modifier = Modifier
+                .fillMaxWidth().height(18.dp)
                 .background(
                     color = bottomBackground,
                     shape = RoundedCornerShape(bottomStart = 6.dp, bottomEnd = 6.dp)
-                ).padding(horizontal = 21.dp, vertical = 2.dp),
+                ),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -64,6 +66,7 @@ fun TimeCard(
                 color = bottomTextColor,
                 fontSize = 10.sp,
                 lineHeight = 10.sp,
+
                 fontWeight = FontWeight.SemiBold,
                 fontFamily = readexProFontFamily(),
             )
