@@ -1,9 +1,10 @@
 package com.example.auction_kmp_project.data.repository
 
 import com.example.auction_kmp_project.domain.models.AuctionCard
-import com.example.auction_kmp_project.domain.repository.HomeRepository
+import com.example.auction_kmp_project.domain.models.CategoryCardModel
+import com.example.auction_kmp_project.domain.repository.ExploreRepository
 
-class HomeRepositoryImpl : HomeRepository {
+class ExploreRepositoryImpl : ExploreRepository {
     override suspend fun getLiveAuctions(): List<String> {
         TODO("Not yet implemented")
     }
@@ -16,7 +17,7 @@ class HomeRepositoryImpl : HomeRepository {
         TODO("Not yet implemented")
     }
 
-    override suspend fun getCategories(): List<String> {
+    override suspend fun getCategories(): List<CategoryCardModel> {
         TODO("Not yet implemented")
     }
 
