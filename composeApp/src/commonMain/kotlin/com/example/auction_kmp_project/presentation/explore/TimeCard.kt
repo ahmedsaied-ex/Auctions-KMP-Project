@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -28,15 +29,14 @@ fun TimeCard(
     bottomText: String
 ) {
     Column(
-        modifier = Modifier.wrapContentHeight()
+        modifier = Modifier.wrapContentHeight(), horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth().height(12.dp)
+            modifier = Modifier.height(12.dp)
                 .background(
                     topBackground,
                     shape = RoundedCornerShape(topStart = 6.dp, topEnd = 6.dp)
-                ),
+                ).padding(horizontal = 26.dp, vertical = 1.dp),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -51,12 +51,11 @@ fun TimeCard(
         }
 
         Row(
-            modifier = Modifier
-                .fillMaxWidth().height(18.dp)
+            modifier = Modifier.height(18.dp)
                 .background(
                     color = bottomBackground,
                     shape = RoundedCornerShape(bottomStart = 6.dp, bottomEnd = 6.dp)
-                ),
+                ).padding(horizontal = 21.dp, vertical = 2.dp),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
