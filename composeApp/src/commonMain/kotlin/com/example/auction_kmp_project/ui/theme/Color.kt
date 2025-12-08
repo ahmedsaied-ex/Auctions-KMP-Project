@@ -13,5 +13,7 @@ val TimeBottomTextColor= Color(0xffEBE9F1)
 val LiveAuctionCardBidTextColor= Color(0xFFF6BC9F)
 val BidStatusText=Color(0xffE0DDEA)
 
+val MainBackgroundColor=Color(0xffF5F4F8)
+
 
 

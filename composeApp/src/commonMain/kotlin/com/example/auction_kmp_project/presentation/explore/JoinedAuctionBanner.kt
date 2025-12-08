@@ -22,10 +22,11 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun JoinedAuctionBanner() {
     Card(
         modifier = Modifier.padding(horizontal = 16.dp, vertical = 30.dp).fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),            // Rounded corners
+        shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
             containerColor = PrimaryBlueColor      // Background color
-        )
+        ),
+        elevation = CardDefaults.cardElevation(8.dp)
     ) {
         Box(modifier = Modifier.fillMaxWidth()) {
             Image(
