@@ -11,14 +11,18 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.auction_kmp_project.presentation.explore.viewModel.CategoryCardViewModel
+import com.example.auction_kmp_project.presentation.explore.viewModel.ExploreViewModel
 import com.example.auction_kmp_project.ui.theme.MainBackgroundColor
 import org.koin.compose.koinInject
 
 
 @Composable
-fun ExploreScreen(navController: NavController,categoryCardViewModel: CategoryCardViewModel= koinInject()) {
+fun ExploreScreen(navController: NavController,categoryCardViewModel: ExploreViewModel= koinInject()) {
     val categories by categoryCardViewModel.category.collectAsState()
+    val upComingAuctions by categoryCardViewModel.upComingAuctions.collectAsState()
+    val ongoingAuctions by categoryCardViewModel.ongoingAuctions.collectAsState()
+
+
     LazyColumn(
         modifier = Modifier.background(MainBackgroundColor).fillMaxSize(),
     ) {
@@ -31,11 +35,15 @@ fun ExploreScreen(navController: NavController,categoryCardViewModel: CategoryCa
         item { Spacer(modifier = Modifier.height(40.dp)) }
         item { TitleSection("Upcoming Explore") }
         item { Spacer(modifier = Modifier.height(14.dp)) }
-        item { UpcomingAuctionBanner() }
+        item { AuctionsList(
+            auctions = upComingAuctions
+        ) }
         item { Spacer(modifier = Modifier.height(40.dp)) }
         item { TitleSection("Ongoing Explore") }
         item { Spacer(modifier = Modifier.height(14.dp)) }
-        item { UpcomingAuctionBanner() }
+        item { AuctionsList(
+            auctions = ongoingAuctions
+        ) }
         item { Spacer(modifier = Modifier.height(10.dp)) }
         item { JoinedAuctionBanner() }
 
