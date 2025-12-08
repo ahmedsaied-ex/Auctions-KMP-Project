@@ -32,5 +32,7 @@ fun ExploreScreen(navController: NavController) {
         item { Spacer(modifier = Modifier.height(10.dp)) }
         item { JoinedAuctionBanner() }
 
+
+
     }
 }
