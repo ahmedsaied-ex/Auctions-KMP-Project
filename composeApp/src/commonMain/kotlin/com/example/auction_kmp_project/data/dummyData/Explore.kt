@@ -252,7 +252,7 @@ object Explore {
             category = Categories.CARS,
             status = Staus.COMPLETED
         ))
-    val categories: List<AuctionCardModel> = listOf(
+    val categories: List<CategoryCardModel> = listOf(
         CategoryCardModel("Electronics", Res.drawable.electronics),
         CategoryCardModel("Cars", Res.drawable.cars),
         CategoryCardModel("Jewels", Res.drawable.jewels),

@@ -10,11 +10,10 @@ import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 
+
 @Preview(showBackground = true)
 @Composable
 fun LiveAuctionCardList() {
-
-
     LazyRow(
         modifier = Modifier.fillMaxWidth(),
         contentPadding = PaddingValues(horizontal = 16.dp),
@@ -25,8 +24,3 @@ fun LiveAuctionCardList() {
         }
     }
 }
-
-
-
-
-
