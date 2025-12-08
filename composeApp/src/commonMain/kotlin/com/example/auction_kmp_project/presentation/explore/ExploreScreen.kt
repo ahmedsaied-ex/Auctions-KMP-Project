@@ -16,18 +16,22 @@ import androidx.navigation.NavController
 
 @Composable
 fun ExploreScreen(navController: NavController) {
-    LazyColumn(
+    LazyColumn (
         modifier = Modifier.fillMaxSize(),
     ) {
         item { ExploreAppBar() }
         item { LiveAuctionCardList() }
-        item { Spacer(modifier = Modifier.height(20.dp)) }
+        item { Spacer(modifier = Modifier.height(40.dp)) }
         item { TitleSection("Categories") }
-        item { Spacer(modifier = Modifier.height(20.dp)) }
+        item { Spacer(modifier = Modifier.height(12.dp)) }
+        item{ CategoryCardsList() }
+        item { Spacer(modifier = Modifier.height(40.dp)) }
         item { TitleSection("Upcoming Auctions") }
         item { Spacer(modifier = Modifier.height(14.dp)) }
         item { UpcomingAuctionBanner() }
         item { Spacer(modifier = Modifier.height(20.dp)) }
+
+
 
     }
 }

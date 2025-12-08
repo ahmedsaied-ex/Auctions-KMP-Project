@@ -60,7 +60,7 @@ fun LiveAuctionCard(modifier: Modifier) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(16.dp),
+                    .padding(20.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.width(80.dp)) {
