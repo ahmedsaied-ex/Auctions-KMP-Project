@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.auction_kmp_project.helpers.FontSizes.font16
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 
@@ -17,7 +18,7 @@ fun AuctionCardTitle(title: String,modifier: Modifier) {
         title, style = TextStyle(
             fontFamily = readexProFontFamily(),
             fontWeight = FontWeight.Medium,
-            fontSize = 16.sp,
+            fontSize = font16,
             color = PrimaryBlueColor,
 
         ), modifier = Modifier.fillMaxWidth()

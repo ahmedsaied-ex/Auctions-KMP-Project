@@ -11,6 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.auction_kmp_project.helpers.FontSizes.font12
+import com.example.auction_kmp_project.helpers.Sizes.Size6
 import com.example.auction_kmp_project.ui.theme.BodyColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.DrawableResource
@@ -23,10 +25,10 @@ fun AuctionCardRowInfo(img: DrawableResource, text: String) {
         Image(
             painter = painterResource(img), contentDescription = ""
         )
-        Spacer(modifier = Modifier.width(6.dp))
+        Spacer(modifier = Modifier.width(Size6))
         Text(
             text, style = TextStyle(
-                color = BodyColor, fontFamily = readexProFontFamily(), fontSize = 12.sp
+                color = BodyColor, fontFamily = readexProFontFamily(), fontSize = font12
             )
         )
     }

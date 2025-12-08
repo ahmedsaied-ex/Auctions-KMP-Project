@@ -22,7 +22,16 @@ import androidx.compose.ui.unit.sp
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.electronics
 import com.example.auction_kmp_project.domain.models.CategoryCardModel
+import com.example.auction_kmp_project.helpers.FontSizes.font16
+import com.example.auction_kmp_project.helpers.Sizes.Size10
+import com.example.auction_kmp_project.helpers.Sizes.Size14
+import com.example.auction_kmp_project.helpers.Sizes.Size140
+import com.example.auction_kmp_project.helpers.Sizes.Size16
+import com.example.auction_kmp_project.helpers.Sizes.Size166
+import com.example.auction_kmp_project.helpers.Sizes.Size4
+import com.example.auction_kmp_project.ui.theme.BidStatusText
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
+import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -31,18 +40,15 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview(showBackground = true)
 @Composable
 fun CategoryCard(category: CategoryCardModel) {
-    val gradientColors = listOf(
-        Color(0xffEBE9F1),
-        Color(0xffE0DDEA),
-
-        )
 
     Box(
-        modifier = Modifier.width(140.dp).height(166.dp)
+        modifier = Modifier.width(Size140).height(Size166)
             .background(
-                shape = RoundedCornerShape(10.dp),
+                shape = RoundedCornerShape(Size10),
                 brush = Brush.horizontalGradient(
-                    colors = gradientColors
+                    colors = listOf(
+                        TimeBottomTextColor,
+                        BidStatusText,)
                 )
             )
     )
@@ -52,11 +58,11 @@ fun CategoryCard(category: CategoryCardModel) {
             fontFamily = readexProFontFamily(),
             color = PrimaryBlueColor,
             fontWeight = FontWeight.Medium,
-            fontSize = 16.sp,
+            fontSize = font16,
             modifier = Modifier
-                .align(Alignment.TopStart).padding(horizontal = 14.dp, vertical = 16.dp)
+                .align(Alignment.TopStart).padding(horizontal = Size14, vertical = Size16)
         )
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.height(Size4))
         Image(
             modifier = Modifier.align(Alignment.BottomEnd),
             painter = painterResource(category.image),

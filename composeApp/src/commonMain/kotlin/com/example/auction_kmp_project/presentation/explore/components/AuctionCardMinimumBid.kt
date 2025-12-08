@@ -11,6 +11,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.auction_kmp_project.helpers.FontSizes.font10
+import com.example.auction_kmp_project.helpers.FontSizes.font20
+import com.example.auction_kmp_project.helpers.Sizes.Size4
 import com.example.auction_kmp_project.ui.theme.BodyColor
 import com.example.auction_kmp_project.ui.theme.PrimaryOrangeColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
@@ -24,7 +27,7 @@ fun AuctionCardMinimumBid(currencySymbol: String, moneyAmmount: String) {
                 color = BodyColor,
                 fontWeight = FontWeight.Light,
                 fontFamily = readexProFontFamily(),
-                fontSize = 10.sp
+                fontSize = font10
             )
         )
         Row {
@@ -33,16 +36,16 @@ fun AuctionCardMinimumBid(currencySymbol: String, moneyAmmount: String) {
                     color = PrimaryOrangeColor,
                     fontWeight = FontWeight.Light,
                     fontFamily = readexProFontFamily(),
-                    fontSize = 20.sp
+                    fontSize = font20
                 )
             )
-            Spacer(modifier = Modifier.width(4.dp))
+            Spacer(modifier = Modifier.width(Size4))
             Text(
                 moneyAmmount, style = TextStyle(
                     color = PrimaryOrangeColor,
                     fontWeight = FontWeight.Bold,
                     fontFamily = readexProFontFamily(),
-                    fontSize = 20.sp
+                    fontSize =font20
                 )
             )
 

@@ -23,6 +23,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.car
+import com.example.auction_kmp_project.helpers.Sizes.Size10
+import com.example.auction_kmp_project.helpers.Sizes.Size20
+import com.example.auction_kmp_project.helpers.Sizes.Size5
+import com.example.auction_kmp_project.helpers.Sizes.Size80
 import com.example.auction_kmp_project.ui.theme.BodyColor
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
@@ -44,8 +48,8 @@ fun LiveAuctionCard(modifier: Modifier) {
         modifier = modifier,
         colors = CardDefaults.cardColors(
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-        shape = RoundedCornerShape(10.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = Size5),
+        shape = RoundedCornerShape(Size10)
 
     ) {
         Box(
@@ -60,19 +64,19 @@ fun LiveAuctionCard(modifier: Modifier) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(20.dp),
+                    .padding(Size20),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Column(modifier = Modifier.width(80.dp)) {
+                Column(modifier = Modifier.width(Size80)) {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth().height(80.dp)
+                            .fillMaxWidth().height(Size80)
                     ) {
                         Image(
                             painter = painterResource(Res.drawable.car),
                             contentDescription = "car",
                             contentScale = ContentScale.Crop,
-                            modifier = Modifier.fillMaxSize().clip(RoundedCornerShape(10.dp))
+                            modifier = Modifier.fillMaxSize().clip(RoundedCornerShape(Size10))
 
                         )
 

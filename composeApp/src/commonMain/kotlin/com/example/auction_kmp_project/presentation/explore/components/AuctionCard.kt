@@ -24,10 +24,18 @@ import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.auction_card_image_test
 import auctionkmpproject.composeapp.generated.resources.ic_home_calendar_auction_card
 import auctionkmpproject.composeapp.generated.resources.ic_items_auction_card
+import com.example.auction_kmp_project.helpers.Sizes.Size10
+import com.example.auction_kmp_project.helpers.Sizes.Size12
+import com.example.auction_kmp_project.helpers.Sizes.Size14
+import com.example.auction_kmp_project.helpers.Sizes.Size20
+import com.example.auction_kmp_project.helpers.Sizes.Size6
+import com.example.auction_kmp_project.helpers.Sizes.Size80
+import com.example.auction_kmp_project.ui.theme.BidStatusText
 import com.example.auction_kmp_project.domain.models.AuctionCardModel
 import com.example.auction_kmp_project.domain.models.Staus
 import com.example.auction_kmp_project.ui.theme.BodyColor
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
+import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -45,14 +53,14 @@ fun AuctionCard(
             containerColor = Color.White
         )
     ) {
-        Row(modifier = modifier.padding(20.dp).fillMaxWidth()) {
-            Column(modifier = Modifier.width(80.dp)) {
-                Box(Modifier.size(80.dp)) {
+        Row(modifier = modifier.padding(Size20).fillMaxWidth()) {
+            Column(modifier = Modifier.width(Size80)) {
+                Box(Modifier.size(Size80)) {
                     Image(
-                        painter = painterResource(item.imageUrl), // replace with your image
+                        painter = painterResource(Res.drawable.auction_card_image_test), // replace with your image
                         contentDescription = "Rounded Image",
                         modifier = Modifier.fillMaxSize()
-                            .clip(RoundedCornerShape(10.dp)),
+                            .clip(RoundedCornerShape(Size10)),
                         contentScale = ContentScale.Crop
                     )
                 }
