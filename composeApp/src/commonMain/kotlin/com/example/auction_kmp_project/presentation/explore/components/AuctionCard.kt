@@ -19,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.unit.dp
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.auction_card_image_test
 import auctionkmpproject.composeapp.generated.resources.ic_home_calendar_auction_card
@@ -30,12 +29,10 @@ import com.example.auction_kmp_project.helpers.Sizes.Size14
 import com.example.auction_kmp_project.helpers.Sizes.Size20
 import com.example.auction_kmp_project.helpers.Sizes.Size6
 import com.example.auction_kmp_project.helpers.Sizes.Size80
-import com.example.auction_kmp_project.ui.theme.BidStatusText
 import com.example.auction_kmp_project.domain.models.AuctionCardModel
 import com.example.auction_kmp_project.domain.models.Staus
 import com.example.auction_kmp_project.ui.theme.BodyColor
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
-import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -45,10 +42,9 @@ fun AuctionCard(
     modifier: Modifier = Modifier,
     item: AuctionCardModel
 ) {
-
     Card(
         modifier = modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(0.dp),
+
         colors = CardDefaults.cardColors(
             containerColor = Color.White
         )
@@ -64,24 +60,24 @@ fun AuctionCard(
                         contentScale = ContentScale.Crop
                     )
                 }
-                Spacer(modifier = Modifier.height(6.dp))
+                Spacer(modifier = Modifier.height(Size6))
                 AuctionTimeBanner(item = item)
             }
-            Spacer(modifier = Modifier.width(12.dp))
+            Spacer(modifier = Modifier.width(Size12))
             Column(modifier = Modifier.fillMaxWidth()) {
                 AuctionCardTitle(
                     modifier = Modifier.fillMaxWidth(),
                     title = item.title
                 )
-                Spacer(modifier = Modifier.height(6.dp))
+                Spacer(modifier = Modifier.height(Size6))
                 AuctionCardRowInfo(
                     img = Res.drawable.ic_home_calendar_auction_card, text = item.date
                 )
-                Spacer(modifier = Modifier.height(6.dp))
+                Spacer(modifier = Modifier.height(Size6))
                 AuctionCardRowInfo(
                     img = Res.drawable.ic_items_auction_card, text = "${item.itemCount} items"
                 )
-                Spacer(modifier = Modifier.height(14.dp))
+                Spacer(modifier = Modifier.height(Size14))
                 AuctionCardMinimumBid(
                     currencySymbol = item.currencySymbol,
                     moneyAmmount = item.moneyAmount

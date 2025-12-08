@@ -9,11 +9,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.auction_kmp_project.helpers.Sizes.Size10
 import com.example.auction_kmp_project.presentation.explore.viewModel.ExploreViewModel
 import com.example.auction_kmp_project.ui.theme.MainBackgroundColor
 import org.koin.compose.koinInject
+import com.example.auction_kmp_project.helpers.Sizes.Size12
+import com.example.auction_kmp_project.helpers.Sizes.Size14
+import com.example.auction_kmp_project.helpers.Sizes.Size40
 
 
 @Composable
@@ -28,23 +31,23 @@ fun ExploreScreen(navController: NavController,categoryCardViewModel: ExploreVie
     ) {
         item { ExploreAppBar() }
         item { LiveAuctionCardList() }
-        item { Spacer(modifier = Modifier.height(40.dp)) }
+        item { Spacer(modifier = Modifier.height(Size40)) }
         item { TitleSection("Categories") }
-        item { Spacer(modifier = Modifier.height(12.dp)) }
+        item { Spacer(modifier = Modifier.height(Size12)) }
         item { CategoryCardsList(categories) }
-        item { Spacer(modifier = Modifier.height(40.dp)) }
+        item { Spacer(modifier = Modifier.height(Size40)) }
         item { TitleSection("Upcoming Explore") }
-        item { Spacer(modifier = Modifier.height(14.dp)) }
+        item { Spacer(modifier = Modifier.height(Size14)) }
         item { AuctionsList(
             auctions = upComingAuctions
         ) }
-        item { Spacer(modifier = Modifier.height(40.dp)) }
+        item { Spacer(modifier = Modifier.height(Size40)) }
         item { TitleSection("Ongoing Explore") }
-        item { Spacer(modifier = Modifier.height(14.dp)) }
+        item { Spacer(modifier = Modifier.height(Size14)) }
         item { AuctionsList(
             auctions = ongoingAuctions
         ) }
-        item { Spacer(modifier = Modifier.height(10.dp)) }
+        item { Spacer(modifier = Modifier.height(Size10)) }
         item { JoinedAuctionBanner(){} }
 
 

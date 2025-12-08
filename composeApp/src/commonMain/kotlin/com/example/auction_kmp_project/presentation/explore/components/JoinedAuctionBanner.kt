@@ -10,11 +10,11 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.joined_auctions
 import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.helpers.Sizes.Size30
+import com.example.auction_kmp_project.helpers.Sizes.Size8
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -28,7 +28,8 @@ fun JoinedAuctionBanner(onClick:()-> Unit) {
         colors = CardDefaults.cardColors(
             containerColor = PrimaryBlueColor      // Background color
         ),
-        elevation = CardDefaults.cardElevation(8.dp)
+        elevation = CardDefaults.cardElevation(Size8
+        )
     ) {
         Box(modifier = Modifier.fillMaxWidth()) {
             Image(

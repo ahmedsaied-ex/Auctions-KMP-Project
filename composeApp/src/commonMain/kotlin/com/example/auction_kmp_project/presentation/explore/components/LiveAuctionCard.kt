@@ -20,10 +20,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.unit.dp
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.car
 import com.example.auction_kmp_project.helpers.Sizes.Size10
+import com.example.auction_kmp_project.helpers.Sizes.Size12
 import com.example.auction_kmp_project.helpers.Sizes.Size20
 import com.example.auction_kmp_project.helpers.Sizes.Size5
 import com.example.auction_kmp_project.helpers.Sizes.Size80
@@ -82,7 +82,7 @@ fun LiveAuctionCard(modifier: Modifier) {
 
                     }
 
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(Size12))
 
 
                     TimeCard(

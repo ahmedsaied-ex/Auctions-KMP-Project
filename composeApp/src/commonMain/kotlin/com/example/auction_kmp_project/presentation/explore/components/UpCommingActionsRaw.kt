@@ -7,8 +7,9 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.example.auction_kmp_project.domain.models.AuctionCardModel
+import com.example.auction_kmp_project.helpers.Sizes.Size16
+import com.example.auction_kmp_project.helpers.Sizes.Size8
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 
@@ -17,8 +18,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun AuctionsList(auctions: List<AuctionCardModel>) {
     LazyRow(
         Modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = 16.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+        contentPadding = PaddingValues(horizontal = Size16),
+        horizontalArrangement = Arrangement.spacedBy(Size8)
     ) {
         items(auctions){ item->
             AuctionCard(modifier = Modifier.fillParentMaxWidth(),item)

@@ -9,15 +9,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.auction_kmp_project.helpers.FontSizes.font12
+import com.example.auction_kmp_project.helpers.Sizes.Size24
+import com.example.auction_kmp_project.ui.theme.BottomNavBarIndicator
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
+import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -28,7 +29,7 @@ fun BottomNavBar(navController: NavController) {
     val currentRoute = navBackStackEntry?.destination?.route
 
     NavigationBar(
-        containerColor = Color(0xffEBE9F1),
+        containerColor = TimeBottomTextColor,
     ) {
         bottomNavItems.forEach { item ->
             val isSelected = currentRoute == item.route.route
@@ -40,7 +41,7 @@ fun BottomNavBar(navController: NavController) {
                             if (isSelected) item.iconActive else item.iconInActive
                         ),
                         contentDescription = item.label,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier.size(Size24)
                     )
                 },
                 label = {
@@ -73,7 +74,7 @@ fun BottomNavBar(navController: NavController) {
                     }
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    indicatorColor = Color(0xE6E0DDEA) // This is the selected item's background
+                    indicatorColor = BottomNavBarIndicator // This is the selected item's background
                 ),
 
             )
