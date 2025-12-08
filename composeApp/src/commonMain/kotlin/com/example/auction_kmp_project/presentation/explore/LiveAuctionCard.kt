@@ -34,14 +34,14 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Preview(showBackground = true)
 @Composable
-fun LiveAuctionCard() {
+fun LiveAuctionCard(modifier: Modifier) {
     val gradientColors = listOf(
         BodyColor,
         PrimaryBlueColor,
         BodyColor
     )
     Card(
-        modifier = Modifier.width(318.dp),
+        modifier = modifier,
         colors = CardDefaults.cardColors(
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),

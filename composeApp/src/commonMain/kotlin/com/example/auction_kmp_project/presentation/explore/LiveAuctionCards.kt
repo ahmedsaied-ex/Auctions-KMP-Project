@@ -47,7 +47,7 @@ fun LiveAuctionCardList() {
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         items(2) { _ ->
-            LiveAuctionCard()
+            LiveAuctionCard(modifier = Modifier.fillParentMaxWidth())
         }
     }
 }
