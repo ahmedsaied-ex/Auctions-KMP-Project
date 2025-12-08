@@ -7,6 +7,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.auction_kmp_project.helpers.Sizes.Size10
+import com.example.auction_kmp_project.helpers.Sizes.Size15
+import com.example.auction_kmp_project.helpers.Sizes.Size20
 
 @Composable
 fun JoinedAuctionBannerDataColumn(
@@ -16,11 +19,11 @@ fun JoinedAuctionBannerDataColumn(
     buttonText:String,
     onClick: () -> Unit
 ){
-    Column(modifier = Modifier.padding(20.dp)) {
+    Column(modifier = Modifier.padding(Size20)) {
         JoinedAuctionsBannerTitle(titleText = joinedAuctionsTitle)
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.height(Size10))
         JoinedAuctionsBannerAuctionsRaw(numberOfAuctions = joinedAuctionsNumber)
-        Spacer(Modifier.height(15.dp))
+        Spacer(Modifier.height(Size15))
         JoinedAuctionsBannerButton(
             buttonText = buttonText
         ){

@@ -10,6 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.auction_kmp_project.helpers.FontSizes.font13
+import com.example.auction_kmp_project.helpers.FontSizes.font16
+import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.PrimaryOrangeColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
@@ -20,13 +23,13 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 fun TitleSection(title: String ) {
     Row(
-        Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+        Modifier.fillMaxWidth().padding(horizontal = Size16),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Text(
             title,
             color = PrimaryBlueColor,
-            fontSize = 16.sp,
+            fontSize = font16,
             fontFamily = readexProFontFamily(),
             fontWeight = FontWeight.Medium
         )
@@ -34,7 +37,7 @@ fun TitleSection(title: String ) {
         Text(
             "View All",
             color = PrimaryOrangeColor,
-            fontSize = 13.sp,
+            fontSize = font13,
             fontFamily = readexProFontFamily()
         )
     }

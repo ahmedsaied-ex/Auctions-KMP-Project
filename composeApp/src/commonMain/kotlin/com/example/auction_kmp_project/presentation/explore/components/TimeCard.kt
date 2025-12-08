@@ -12,10 +12,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.auction_kmp_project.helpers.FontSizes.font10
+import com.example.auction_kmp_project.helpers.FontSizes.font8
+import com.example.auction_kmp_project.helpers.Sizes.Size12
+import com.example.auction_kmp_project.helpers.Sizes.Size18
+import com.example.auction_kmp_project.helpers.Sizes.Size6
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 
 @Composable
@@ -32,10 +38,10 @@ fun TimeCard(
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth().height(12.dp)
+                .fillMaxWidth().height(Size12)
                 .background(
                     topBackground,
-                    shape = RoundedCornerShape(topStart = 6.dp, topEnd = 6.dp)
+                    shape = RoundedCornerShape(topStart = Size6, topEnd = Size6)
                 ),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
@@ -43,8 +49,8 @@ fun TimeCard(
             Text(
                 text = topText,
                 color = topTextColor,
-                fontSize = 8.sp,
-                lineHeight = 8.sp,
+                fontSize = font8,
+                lineHeight = font8,
                 fontWeight = FontWeight.Light,
                 fontFamily = readexProFontFamily(),
             )
@@ -52,10 +58,10 @@ fun TimeCard(
 
         Row(
             modifier = Modifier
-                .fillMaxWidth().height(18.dp)
+                .fillMaxWidth().height(Size18)
                 .background(
                     color = bottomBackground,
-                    shape = RoundedCornerShape(bottomStart = 6.dp, bottomEnd = 6.dp)
+                    shape = RoundedCornerShape(bottomStart = Size6, bottomEnd = Size6)
                 ),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
@@ -63,8 +69,8 @@ fun TimeCard(
             Text(
                 text = bottomText,
                 color = bottomTextColor,
-                fontSize = 10.sp,
-                lineHeight = 10.sp,
+                fontSize = font10,
+                lineHeight = font10,
 
                 fontWeight = FontWeight.SemiBold,
                 fontFamily = readexProFontFamily(),

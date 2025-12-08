@@ -7,6 +7,8 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.auction_kmp_project.helpers.Sizes.Size12
+import com.example.auction_kmp_project.helpers.Sizes.Size16
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 
@@ -17,8 +19,8 @@ fun LiveAuctionCardList() {
 
     LazyRow(
         modifier = Modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = 16.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+        contentPadding = PaddingValues(horizontal = Size16),
+        horizontalArrangement = Arrangement.spacedBy(Size12)
     ) {
         items(2) { _ ->
             LiveAuctionCard(modifier = Modifier.fillParentMaxWidth())

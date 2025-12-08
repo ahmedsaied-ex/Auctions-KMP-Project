@@ -13,6 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.joined_auctions
+import com.example.auction_kmp_project.helpers.Sizes.Size16
+import com.example.auction_kmp_project.helpers.Sizes.Size30
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -21,8 +23,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview(showBackground = true)
 fun JoinedAuctionBanner() {
     Card(
-        modifier = Modifier.padding(horizontal = 16.dp, vertical = 30.dp).fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),            // Rounded corners
+        modifier = Modifier.padding(horizontal = Size16, vertical = Size30).fillMaxWidth(),
+        shape = RoundedCornerShape(Size16),            // Rounded corners
         colors = CardDefaults.cardColors(
             containerColor = PrimaryBlueColor      // Background color
         )

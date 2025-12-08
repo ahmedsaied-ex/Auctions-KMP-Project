@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.auction_kmp_project.helpers.FontSizes.BottomNavItemTextSize
+import com.example.auction_kmp_project.helpers.FontSizes.font12
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
@@ -50,14 +50,14 @@ fun BottomNavBar(navController: NavController) {
                                 fontFamily = readexProFontFamily(),
                                 fontWeight = FontWeight.Medium,
                                 color = PrimaryBlueColor,
-                                fontSize = BottomNavItemTextSize
+                                fontSize = font12
                             )
                         } else {
                             TextStyle(
                                 fontFamily = readexProFontFamily(),
                                 fontWeight = FontWeight.Light,
                                 color = PrimaryBlueColor,
-                                fontSize = BottomNavItemTextSize
+                                fontSize = font12
                             )
                         }
                     )

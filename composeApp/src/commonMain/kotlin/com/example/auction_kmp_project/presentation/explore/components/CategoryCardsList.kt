@@ -10,6 +10,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.auction_kmp_project.helpers.Sizes.Size12
+import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.presentation.explore.viewModel.CategoryCardViewModel
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.koinInject
@@ -22,8 +24,8 @@ fun CategoryCardsList( categoryCardViewModel: CategoryCardViewModel= koinInject(
 
     LazyRow(
         modifier = Modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = 16.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+        contentPadding = PaddingValues(horizontal =Size16),
+        horizontalArrangement = Arrangement.spacedBy(Size12)
     ) {
         items(categories) { category ->
             CategoryCard(category)

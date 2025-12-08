@@ -15,7 +15,9 @@ import androidx.compose.ui.unit.dp
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.ic_notification_app_bar
 import auctionkmpproject.composeapp.generated.resources.ic_search_app_bar
-import com.example.auction_kmp_project.helpers.FontSizes.AppBarExplorScreenTextSize
+import com.example.auction_kmp_project.helpers.FontSizes.font20
+import com.example.auction_kmp_project.helpers.Sizes.Size16
+import com.example.auction_kmp_project.helpers.Sizes.Size24
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
@@ -24,15 +26,24 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview(showBackground = true)
 @Composable
 fun ExploreAppBar() {
-    Row(modifier = Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-        Text("Explore", fontSize = AppBarExplorScreenTextSize, color = PrimaryBlueColor, fontFamily = readexProFontFamily(), fontWeight = FontWeight.SemiBold)
+    Row(
+        modifier = Modifier.fillMaxWidth().padding(Size16),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Text(
+            "Explore",
+            fontSize = font20,
+            color = PrimaryBlueColor,
+            fontFamily = readexProFontFamily(),
+            fontWeight = FontWeight.SemiBold
+        )
         Row {
             Image(
                 painter = painterResource(Res.drawable.ic_search_app_bar),
                 contentDescription = "search",
 
-            )
-            Spacer(modifier = Modifier.width(24.dp))
+                )
+            Spacer(modifier = Modifier.width(Size24))
             Image(
                 painter = painterResource(Res.drawable.ic_notification_app_bar),
                 contentDescription = "notification"
