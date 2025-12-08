@@ -12,5 +12,5 @@ import androidx.navigation.NavController
 fun AuctionsScreen(navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center
-    ) { Text(text = "Auctions") }
+    ) { Text(text = "Explore") }
 }
