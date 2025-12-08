@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.explore
+package com.example.auction_kmp_project.presentation.explore.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -54,7 +54,7 @@ fun AuctionCard(
                 }
                 Spacer(modifier = Modifier.height(6.dp))
                 TimeCard(
-                    topBackground =Color(0xffE0DDEA) ,
+                    topBackground = Color(0xffE0DDEA),
                     topTextColor = BodyColor,
                     bottomTextColor = PrimaryBlueColor,
                     bottomBackground = Color(0xffEBE9F1),

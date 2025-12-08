@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.explore
+package com.example.auction_kmp_project.presentation.explore.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -9,18 +9,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
-@Preview(showBackground = true)
+
 @Composable
-fun CategoryCardsList() {
-
-
+@Preview
+fun UpcomingAuctionBanner() {
     LazyRow(
-        modifier = Modifier.fillMaxWidth(),
+        Modifier.fillMaxWidth(),
         contentPadding = PaddingValues(horizontal = 16.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        items(9) { _ ->
-            CategoryCard()
+        items(5){
+            AuctionCard(modifier = Modifier.fillParentMaxWidth())
         }
     }
 }

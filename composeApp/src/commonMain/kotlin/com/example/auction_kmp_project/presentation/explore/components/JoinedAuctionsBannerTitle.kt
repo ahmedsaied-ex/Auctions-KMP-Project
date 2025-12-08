@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.explore
+package com.example.auction_kmp_project.presentation.explore.components
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
