@@ -15,6 +15,7 @@ object FontSizes {
 }
 
 object Sizes {
+    val Size05 = 0.5.dp
     val Size1 = 1.dp
     val Size2 = 2.dp
     val Size3 = 3.dp
@@ -31,6 +32,7 @@ object Sizes {
     val Size19 = 19.dp
     val Size20 = 20.dp
     val Size24 = 24.dp
+    val Size25 = 25.dp
     val Size28 = 28.dp
     val Size30 = 30.dp
     val Size32 = 32.dp
