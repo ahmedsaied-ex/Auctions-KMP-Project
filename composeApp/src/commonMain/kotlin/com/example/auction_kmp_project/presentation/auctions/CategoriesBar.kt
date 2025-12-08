@@ -24,6 +24,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.ic_category
 import com.example.auction_kmp_project.helpers.FontSizes.font13
@@ -54,7 +55,7 @@ fun CategoryChipsRow(
 ) {
     Row(
         modifier = Modifier
-            .fillMaxWidth().padding(horizontal = Size16),
+            .fillMaxWidth().background(Color(0xffF1EFF5)).padding(horizontal = Size16, vertical =Size8 ),
         verticalAlignment = Alignment.CenterVertically
     ) {
 

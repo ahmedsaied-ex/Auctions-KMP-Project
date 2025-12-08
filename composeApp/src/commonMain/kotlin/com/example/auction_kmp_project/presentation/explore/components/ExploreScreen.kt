@@ -20,10 +20,10 @@ import com.example.auction_kmp_project.helpers.Sizes.Size40
 
 
 @Composable
-fun ExploreScreen(navController: NavController,categoryCardViewModel: ExploreViewModel= koinInject()) {
-    val categories by categoryCardViewModel.category.collectAsState()
-    val upComingAuctions by categoryCardViewModel.upComingAuctions.collectAsState()
-    val ongoingAuctions by categoryCardViewModel.ongoingAuctions.collectAsState()
+fun ExploreScreen(navController: NavController, exploreViewModel: ExploreViewModel= koinInject()) {
+    val categories by exploreViewModel.category.collectAsState()
+    val upComingAuctions by exploreViewModel.upComingAuctions.collectAsState()
+    val ongoingAuctions by exploreViewModel.ongoingAuctions.collectAsState()
 
 
     LazyColumn(
