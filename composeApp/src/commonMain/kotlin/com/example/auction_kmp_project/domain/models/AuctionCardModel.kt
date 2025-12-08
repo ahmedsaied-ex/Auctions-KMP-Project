@@ -10,11 +10,16 @@ data class AuctionCardModel(
     val moneyAmount:String,
     val auctionTime:String,
     val currencySymbol:String,
-    val category:Categories
+    val category:Categories,
+    val status:Staus
 
 )
 
 
 enum class Categories{
 ELECTRONICS,CARS,JEWELERY,ANTIQUES,REAL_STATE,VEGETABLES_AND_FRUITS
+}
+
+enum class Staus{
+    ONGOING,UPCOMING,COMPLETED
 }

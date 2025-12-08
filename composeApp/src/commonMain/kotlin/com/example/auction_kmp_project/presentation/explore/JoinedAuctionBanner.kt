@@ -35,7 +35,7 @@ fun JoinedAuctionBanner() {
                 contentDescription = "joined auctions"
             )
             JoinedAuctionBannerDataColumn(
-                joinedAuctionsTitle = "Joined Auctions",
+                joinedAuctionsTitle = "Joined Explore",
                 joinedAuctionsNumber = "5",
                 buttonText = "VIEW",
             ) {}

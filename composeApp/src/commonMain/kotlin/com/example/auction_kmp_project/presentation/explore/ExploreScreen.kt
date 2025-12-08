@@ -22,11 +22,11 @@ fun ExploreScreen(navController: NavController) {
         item { Spacer(modifier = Modifier.height(20.dp)) }
         item { TitleSection("Categories") }
         item { Spacer(modifier = Modifier.height(20.dp)) }
-        item { TitleSection("Upcoming Auctions") }
+        item { TitleSection("Upcoming Explore") }
         item { Spacer(modifier = Modifier.height(14.dp)) }
         item { UpcomingAuctionBanner() }
         item { Spacer(modifier = Modifier.height(40.dp)) }
-        item { TitleSection("Ongoing Auctions") }
+        item { TitleSection("Ongoing Explore") }
         item { Spacer(modifier = Modifier.height(14.dp)) }
         item { UpcomingAuctionBanner() }
         item { Spacer(modifier = Modifier.height(10.dp)) }
