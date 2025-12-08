@@ -23,6 +23,15 @@ val BidStatusText=Color(0xffE0DDEA)
 val MainBackgroundColor=Color(0xffF5F4F8)
 
 
+val CategoryItemSelectedBorderColor=Color(0xffF6BC9F)
+val CategoryItemUnSelectedBorderColor=Color(0xffF8CDB7)
+val CategoryItemSelectedBackgroundColor=Color(0xffF8CDB7)
+val CategoryItemUnSelectedBackgroundColor=Color(0xffFEF7F3)
+val CategoryItemSelectedTextColor=Color(0xffA33E0A)
+val CategoryItemUnSelectedTextColor=Color(0xffEB6926)
+
+
+
 
 
 

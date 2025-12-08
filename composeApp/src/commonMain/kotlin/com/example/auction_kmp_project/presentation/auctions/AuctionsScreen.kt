@@ -1,5 +1,6 @@
 package com.example.auction_kmp_project.presentation.auctions
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,6 +19,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 fun AuctionsScreen(navController: NavController) {
+    Column { CategoriesBar() }
     var searchedText by remember { mutableStateOf("") }
     var selectedTab by remember { mutableStateOf(0) }
     Column(modifier = Modifier.fillMaxSize(),) {
