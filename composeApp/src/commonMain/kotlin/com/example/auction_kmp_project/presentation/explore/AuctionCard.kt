@@ -66,7 +66,7 @@ fun AuctionCard(
             Column(modifier = Modifier.fillMaxWidth()) {
                 AuctionCardTitle(
                     modifier = Modifier.fillMaxWidth(),
-                    title = "Eshraqet Al Riyadh"
+                    title = "Mazad Mogan"
                 )
                 Spacer(modifier = Modifier.height(6.dp))
                 AuctionCardRowInfo(
@@ -78,7 +78,8 @@ fun AuctionCard(
                 )
                 Spacer(modifier = Modifier.height(14.dp))
                 AuctionCardMinimumBid(
-                    currencySymbol = "SR", moneyAmmount = "1,050,000"
+                    currencySymbol = "SR",
+                    moneyAmmount = "1,050,000"
                 )
 
             }

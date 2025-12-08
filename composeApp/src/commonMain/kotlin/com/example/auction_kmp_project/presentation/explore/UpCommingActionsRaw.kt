@@ -16,10 +16,10 @@ fun UpcomingAuctionBanner() {
     LazyRow(
         Modifier.fillMaxWidth(),
         contentPadding = PaddingValues(horizontal = 16.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(5){
-            AuctionCard(modifier = Modifier.fillMaxWidth())
+            AuctionCard(modifier = Modifier.fillParentMaxWidth())
         }
     }
 }
