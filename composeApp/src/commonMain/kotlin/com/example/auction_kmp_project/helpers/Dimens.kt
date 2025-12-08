@@ -22,6 +22,7 @@ object Sizes {
     val Size5 = 5.dp
     val Size6 = 6.dp
     val Size8 = 8.dp
+    val Size9 = 9.dp
     val Size10 = 10.dp
     val Size12 = 12.dp
     val Size14 = 14.dp
@@ -36,7 +37,9 @@ object Sizes {
     val Size32 = 32.dp
     val Size36 = 36.dp
     val Size40 = 40.dp
+    val Size46 = 46.dp
     val Size48 = 48.dp
+    val Size50 = 50.dp
     val Size64 = 64.dp
     val Size76 = 76.dp
     val Size80 = 80.dp
