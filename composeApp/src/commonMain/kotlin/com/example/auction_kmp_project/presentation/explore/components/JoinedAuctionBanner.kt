@@ -19,7 +19,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview(showBackground = true)
-fun JoinedAuctionBanner() {
+fun JoinedAuctionBanner(onClick:()-> Unit) {
     Card(
         modifier = Modifier.padding(horizontal = 16.dp, vertical = 30.dp).fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
@@ -38,7 +38,7 @@ fun JoinedAuctionBanner() {
                 joinedAuctionsTitle = "Joined Explore",
                 joinedAuctionsNumber = "5",
                 buttonText = "VIEW",
-            ) {}
+            ) {onClick()}
         }
 
 

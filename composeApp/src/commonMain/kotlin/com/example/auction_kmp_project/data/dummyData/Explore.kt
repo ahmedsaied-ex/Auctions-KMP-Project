@@ -107,17 +107,19 @@ object Explore {
             category = Categories.REAL_STATE,
             status = Staus.UPCOMING
         ),
+
         AuctionCardModel(
-            title = "Mazad Mogan 2",
-            date = "31 May - 2 Jun 2023",
-            imageUrl = Res.drawable.auction_card_image_test,
-            itemCount = 9,
-            moneyAmount = "125,000",
-            auctionTime = "18h 9m 5s",
+            title = "Mazad Mogan",
+            date = "2 Jun 2023",
+            imageUrl = Res.drawable.auction_card_image_test_two,
+            itemCount = 20,
+            moneyAmount = "1,050,000",
+            auctionTime = "1h 49m 5s",
             currencySymbol = "SR",
-            category = Categories.ELECTRONICS,
+            category = Categories.CARS,
             status = Staus.UPCOMING
         ),
+
         AuctionCardModel(
             title = "Nasem Hail",
             date = "31 May - 2 Jun 2023",
@@ -139,16 +141,15 @@ object Explore {
             currencySymbol = "SR",
             category = Categories.ANTIQUES,
             status = Staus.UPCOMING
-        ),
-        AuctionCardModel(
-            title = "Mosa mazad",
-            date = "2 Jun 2023",
+        ),AuctionCardModel(
+            title = "Mazad Mogan 2",
+            date = "31 May - 2 Jun 2023",
             imageUrl = Res.drawable.auction_card_image_test,
-            itemCount = 14,
-            moneyAmount = "50,000",
-            auctionTime = "2h 9m 5s",
+            itemCount = 9,
+            moneyAmount = "125,000",
+            auctionTime = "18h 9m 5s",
             currencySymbol = "SR",
-            category = Categories.REAL_STATE,
+            category = Categories.ELECTRONICS,
             status = Staus.UPCOMING
         ),
         AuctionCardModel(
@@ -162,19 +163,20 @@ object Explore {
             category = Categories.VEGETABLES_AND_FRUITS,
             status = Staus.UPCOMING
         ),
-        AuctionCardModel(
-            title = "Mazad Mogan",
-            date = "2 Jun 2023",
-            imageUrl = Res.drawable.auction_card_image_test_two,
-            itemCount = 20,
-            moneyAmount = "1,050,000",
-            auctionTime = "1h 49m 5s",
-            currencySymbol = "SR",
-            category = Categories.CARS,
-            status = Staus.UPCOMING
-        ),
     )
     val completedAuctions: List<AuctionCardModel> = listOf(
+
+        AuctionCardModel(
+            title = "Nasem Hail",
+            date = "31 May - 2 Jun 2023",
+            imageUrl = Res.drawable.auction_card_image_test_three,
+            itemCount = 15,
+            moneyAmount = "800,000",
+            auctionTime = "4m 5s",
+            currencySymbol = "SR",
+            category = Categories.JEWELERY,
+            status = Staus.COMPLETED
+        ),
         AuctionCardModel(
             title = "Mazad Mogan",
             date = "2 Jun 2023",
@@ -187,6 +189,17 @@ object Explore {
             status = Staus.COMPLETED
         ),
         AuctionCardModel(
+            title = "Mazad Mogan",
+            date = "2 Jun 2023",
+            imageUrl = Res.drawable.auction_card_image_test_two,
+            itemCount = 20,
+            moneyAmount = "1,050,000",
+            auctionTime = "1h 49m 5s",
+            currencySymbol = "SR",
+            category = Categories.CARS,
+            status = Staus.COMPLETED
+        ),
+        AuctionCardModel(
             title = "Mazad Mogan 2",
             date = "31 May - 2 Jun 2023",
             imageUrl = Res.drawable.auction_card_image_test,
@@ -195,17 +208,6 @@ object Explore {
             auctionTime = "18h 9m 5s",
             currencySymbol = "SR",
             category = Categories.ELECTRONICS,
-            status = Staus.COMPLETED
-        ),
-        AuctionCardModel(
-            title = "Nasem Hail",
-            date = "31 May - 2 Jun 2023",
-            imageUrl = Res.drawable.auction_card_image_test_three,
-            itemCount = 15,
-            moneyAmount = "800,000",
-            auctionTime = "4m 5s",
-            currencySymbol = "SR",
-            category = Categories.JEWELERY,
             status = Staus.COMPLETED
         ),
         AuctionCardModel(
@@ -241,17 +243,8 @@ object Explore {
             category = Categories.VEGETABLES_AND_FRUITS,
             status = Staus.COMPLETED
         ),
-        AuctionCardModel(
-            title = "Mazad Mogan",
-            date = "2 Jun 2023",
-            imageUrl = Res.drawable.auction_card_image_test_two,
-            itemCount = 20,
-            moneyAmount = "1,050,000",
-            auctionTime = "1h 49m 5s",
-            currencySymbol = "SR",
-            category = Categories.CARS,
-            status = Staus.COMPLETED
-        ))
+
+        )
     val categories: List<CategoryCardModel> = listOf(
         CategoryCardModel("Electronics", Res.drawable.electronics),
         CategoryCardModel("Cars", Res.drawable.cars),
