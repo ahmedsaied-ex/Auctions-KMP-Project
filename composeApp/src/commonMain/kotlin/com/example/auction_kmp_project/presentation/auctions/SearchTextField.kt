@@ -17,10 +17,12 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.style.TextAlign
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.search
 import com.example.auction_kmp_project.helpers.FontSizes.font13
 import com.example.auction_kmp_project.helpers.Sizes.Size50
+import com.example.auction_kmp_project.helpers.Sizes.Size60
 import com.example.auction_kmp_project.helpers.Sizes.Size9
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.TextSectionBackgroundColor
@@ -44,15 +46,14 @@ fun SearchTextField(
         onValueChange = { newText ->
             onChanged(newText)
         },
-        modifier = modifier
-            .height(Size50),    // APPLY WIDTH FROM PARENT
+        modifier = modifier.height(Size60),   // APPLY WIDTH FROM PARENT
         placeholder = {
             Text(
                 "Search for auctions", style = TextStyle(
                     fontSize = font13,
                     color = TimeCardbottomBackgroundColor,
                     fontFamily = readexProFontFamily()
-                ), modifier = Modifier.fillMaxHeight()
+                ), modifier = Modifier.fillMaxHeight(), textAlign = TextAlign.Center
             )
         },
         leadingIcon = {
