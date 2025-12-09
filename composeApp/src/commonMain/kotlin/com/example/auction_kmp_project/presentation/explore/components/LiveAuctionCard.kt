@@ -39,11 +39,6 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview(showBackground = true)
 @Composable
 fun LiveAuctionCard(modifier: Modifier) {
-    val gradientColors = listOf(
-        BodyColor,
-        PrimaryBlueColor,
-        BodyColor
-    )
     Card(
         modifier = modifier,
         colors = CardDefaults.cardColors(
@@ -56,7 +51,11 @@ fun LiveAuctionCard(modifier: Modifier) {
             modifier = Modifier
                 .background(
                     brush = Brush.horizontalGradient(
-                        colors = gradientColors
+                        colors =  listOf(
+                            BodyColor,
+                            PrimaryBlueColor,
+                            BodyColor
+                        )
                     )
                 )
         ) {
