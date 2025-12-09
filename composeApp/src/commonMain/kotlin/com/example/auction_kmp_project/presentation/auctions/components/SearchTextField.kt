@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.auctions
+package com.example.auction_kmp_project.presentation.auctions.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -23,8 +23,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import auctionkmpproject.composeapp.generated.resources.Res
@@ -49,8 +47,6 @@ fun SearchTextField(
     onSearch: (String) -> Unit,
     focusRequester: FocusRequester = remember { FocusRequester() }
 ) {
-    val keyboardController = LocalSoftwareKeyboardController.current
-    val focusManager = LocalFocusManager.current
 
     CompositionLocalProvider(
         LocalTextSelectionColors provides TextSelectionColors(
@@ -79,8 +75,6 @@ fun SearchTextField(
             keyboardActions = KeyboardActions(
                 onSearch = {
                     onSearch(searchedText)
-                    keyboardController?.hide()
-                    focusManager.clearFocus()
                 }
             ),
             decorationBox = { innerTextField ->

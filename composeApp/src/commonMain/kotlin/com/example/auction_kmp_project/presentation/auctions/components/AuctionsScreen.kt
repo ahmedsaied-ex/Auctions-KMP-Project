@@ -1,14 +1,10 @@
-package com.example.auction_kmp_project.presentation.auctions
+package com.example.auction_kmp_project.presentation.auctions.components
 
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -21,67 +17,58 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.navigation.NavController
-import com.example.auction_kmp_project.helpers.Sizes.Size16
-import com.example.auction_kmp_project.helpers.Sizes.Size6
+import com.example.auction_kmp_project.helpers.Sizes.Size12
 import com.example.auction_kmp_project.helpers.Sizes.Size8
-import com.example.auction_kmp_project.presentation.explore.components.AuctionCard
-import com.example.auction_kmp_project.presentation.explore.viewModel.ExploreViewModel
-import com.example.auction_kmp_project.ui.theme.MainBackgroundColor
+import com.example.auction_kmp_project.presentation.auctions.viewModel.AuctionsViewModel
 import org.koin.compose.koinInject
 
 @Composable
-fun AuctionsScreen(navController: NavController,exploreViewModel: ExploreViewModel= koinInject()) {
-    val ongoingAuctions by exploreViewModel.ongoingAuctions.collectAsState()
+fun AuctionsScreen(
+    navController: NavController, auctionsViewModel: AuctionsViewModel = koinInject()
+) {
+    val auctions by auctionsViewModel.currentList.collectAsState()
+    val categoriesList by auctionsViewModel.categoryList.collectAsState()
+    val auctionsList by auctionsViewModel.auctionsBar.collectAsState()
     var searchedText by remember { mutableStateOf("") }
     var selectedTab by remember { mutableStateOf(0) }
     val focusRequester = remember { FocusRequester() }
-    var selected by remember { mutableStateOf("All") }
+    var selected by remember { mutableStateOf(categoriesList[0]) }
     val focusManager = LocalFocusManager.current
     val keyboardController = LocalSoftwareKeyboardController.current
+
     Column(modifier = Modifier.background(Color.White).fillMaxSize(),) {
         SearchBar(
             focusRequester = focusRequester,
             searchedText = searchedText,
             onTextChanged = { newText -> searchedText = newText },
-            onSearch = {}
+            onSearch = {
+                focusManager.clearFocus()
+                keyboardController?.hide()
+            }
         )
+        Spacer(modifier = Modifier.height(Size12))
         AuctionTabBar(
-            selectedTabIndex = selectedTab, tabs = listOf("Upcoming", "Ongoing", "Completed")
+            selectedTabIndex = selectedTab, tabs = auctionsList
         ){ index ->
             focusManager.clearFocus()
             keyboardController?.hide()
             selectedTab = index
-            selected="All"
+            selected = categoriesList[0]
+            auctionsViewModel.onTabSelected(index)
         }
         Spacer(modifier = Modifier.height(Size8))
         CategoryChipsRow(
-            categories = listOf(
-                "All",
-                "Electronics",
-                "Cars",
-                "Jewels",
-                "Antiques",
-                "Real Estate",
-                "Vegetables & Fruits"
-            ),
+            categories = categoriesList,
             selectedCategory = selected,
             onCategorySelected = { selected = it
                 focusManager.clearFocus()
                 keyboardController?.hide()
             }
         )
-        LazyColumn(modifier = Modifier.background(MainBackgroundColor)){
-            items(ongoingAuctions){item->
-                Box(modifier = Modifier.padding(horizontal = Size16, vertical = Size6)) {
-                    AuctionCard(item = item)
-                }
-            }
-            }
-        }
-
-
-
+        AuctionScreenAuctionsList(auctions = auctions)
     }
+}
+
 
 
 
