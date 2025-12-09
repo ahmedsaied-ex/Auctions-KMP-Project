@@ -1,9 +1,11 @@
 package com.example.auction_kmp_project.di
 
 import com.example.auction_kmp_project.data.repository.AuctionsRepositoryImpl
+import com.example.auction_kmp_project.data.repository.CategoryRepositoryImpl
 import com.example.auction_kmp_project.data.repository.ExploreRepositoryImpl
 import com.example.auction_kmp_project.data.repository.ItemsRepositoryImpl
 import com.example.auction_kmp_project.domain.repository.AuctionsRepository
+import com.example.auction_kmp_project.domain.repository.CategoryRepository
 import com.example.auction_kmp_project.domain.repository.ExploreRepository
 import com.example.auction_kmp_project.domain.repository.ItemsRepository
 import com.example.auction_kmp_project.domain.useCase.AuctionItemsCardsUseCase
@@ -25,6 +27,7 @@ val appModule = module {
     singleOf(::ExploreRepositoryImpl) bind ExploreRepository::class
     singleOf(::ItemsRepositoryImpl) bind ItemsRepository::class
     singleOf(::AuctionsRepositoryImpl) bind AuctionsRepository::class
+    singleOf(::CategoryRepositoryImpl) bind CategoryRepository::class
     //UseCases
     singleOf(::CategoryCardUseCase)
     singleOf(::AuctionItemsCardsUseCase)

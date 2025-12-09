@@ -48,7 +48,7 @@ object Sizes {
     val Size128 = 128.dp
     val Size140 = 140.dp
     val Size166 = 166.dp
-    val Size180 = 180.dp
+    val Size220 = 220.dp
 
 
 }
