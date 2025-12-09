@@ -6,7 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.auction_kmp_project.presentation.auctions.components.AuctionsScreen
 import com.example.auction_kmp_project.presentation.explore.components.ExploreScreen
-import com.example.auction_kmp_project.presentation.items.ItemsScreen
+import com.example.auction_kmp_project.presentation.items.components.ItemsScreen
 import com.example.auction_kmp_project.presentation.profile.ProfileScreen
 
 

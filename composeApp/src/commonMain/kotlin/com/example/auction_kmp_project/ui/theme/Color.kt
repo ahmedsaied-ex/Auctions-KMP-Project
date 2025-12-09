@@ -20,6 +20,8 @@ val LiveAuctionCardBidTextColor= Color(0xFFF6BC9F)
 val BidStatusText=Color(0xffE0DDEA)
 
 val MainBackgroundColor=Color(0xffF5F4F8)
+val AuctionItemCardBackgroundColor = Color(0xff00000000)
+val Black =Color(0xff000000)
 
 
 val CategoryItemSelectedBorderColor=Color(0xffF6BC9F)
