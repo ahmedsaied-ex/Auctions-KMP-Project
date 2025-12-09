@@ -33,6 +33,7 @@ import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
+
 @Composable
 fun AuctionItemCard(item: AuctionItemCardModel) {
     Card(
