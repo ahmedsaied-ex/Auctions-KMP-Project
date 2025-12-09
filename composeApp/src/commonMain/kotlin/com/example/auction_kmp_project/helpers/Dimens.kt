@@ -12,16 +12,19 @@ object FontSizes {
     val font16 = 16.sp
     val font18 = 18.sp
     val font20 = 20.sp
+    val font25 = 25.sp
 }
 
 object Sizes {
-    val Size05 = 0.5.dp
+    val Size0_5 = 0.5.dp
     val Size1 = 1.dp
+    val Size1_5 = 1.5.dp
     val Size2 = 2.dp
     val Size3 = 3.dp
     val Size4 = 4.dp
     val Size5 = 5.dp
     val Size6 = 6.dp
+    val Size7 = 7.dp
     val Size8 = 8.dp
     val Size9 = 9.dp
     val Size10 = 10.dp
@@ -45,9 +48,13 @@ object Sizes {
     val Size60 = 60.dp
     val Size76 = 76.dp
     val Size80 = 80.dp
+    val Size86 = 86.dp
+
     val Size128 = 128.dp
+    val Size130 = 130.dp
     val Size140 = 140.dp
     val Size166 = 166.dp
+    val Size150 = 150.dp
     val Size180 = 180.dp
 
 

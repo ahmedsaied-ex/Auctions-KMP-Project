@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import com.example.auction_kmp_project.helpers.FontSizes.font13
-import com.example.auction_kmp_project.helpers.Sizes.Size05
+import com.example.auction_kmp_project.helpers.Sizes.Size0_5
 import com.example.auction_kmp_project.helpers.Sizes.Size1
 import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.helpers.Sizes.Size25
@@ -37,7 +37,7 @@ fun CategoriesBarItem(isSelected: Boolean, item: String, onCategorySelected: (St
         )
         .border(
             width = if (isSelected) Size1
-            else Size05,
+            else Size0_5,
             color = if (isSelected)CategoryItemSelectedBorderColor
             else CategoryItemUnSelectedBorderColor,
             shape = RoundedCornerShape(Size25)

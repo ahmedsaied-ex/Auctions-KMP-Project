@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.profile
+package com.example.auction_kmp_project.presentation.profile.presentation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,3 +14,5 @@ fun ProfileScreen(navController: NavController) {
         modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center
     ) { Text(text = "Profile") }
 }
+
+

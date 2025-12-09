@@ -14,7 +14,7 @@ import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 
 @Composable
-fun JoinedAuctionsBannerButton(buttonText:String,onClick : ()-> Unit){
+fun JoinedAuctionsBannerButton(buttonText:String,onClick : ()-> Unit , ){
     Button(
         onClick = {onClick()},
         modifier = Modifier,
