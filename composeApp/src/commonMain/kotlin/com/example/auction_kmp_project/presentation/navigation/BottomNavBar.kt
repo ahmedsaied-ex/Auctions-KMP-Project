@@ -1,3 +1,4 @@
+
 package com.example.auction_kmp_project.presentation.navigation
 
 import androidx.compose.foundation.layout.size
@@ -22,65 +23,54 @@ import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-
 @Composable
 fun BottomNavBar(navController: NavController) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.destination?.route
+    val currentDestination = navBackStackEntry?.destination?.route
 
-    NavigationBar(
-        containerColor = TimeBottomTextColor,
-    ) {
+    NavigationBar(containerColor = TimeBottomTextColor) {
         bottomNavItems.forEach { item ->
-            val isSelected = currentRoute == item.route.route
+
+            val isSelected = currentDestination?.let { route ->
+                route.endsWith(item.route::class.simpleName ?: "")
+            } == true
+
             NavigationBarItem(
-//               ,
                 icon = {
                     Icon(
-                        painter = painterResource(
-                            if (isSelected) item.iconActive else item.iconInActive
-                        ),
+                        painter = painterResource(if (isSelected) item.iconActive else item.iconInActive),
                         contentDescription = item.label,
                         modifier = Modifier.size(Size24)
                     )
                 },
                 label = {
                     Text(
-                        item.label, style = if (isSelected) {
-                            TextStyle(
-                                fontFamily = readexProFontFamily(),
-                                fontWeight = FontWeight.Medium,
-                                color = PrimaryBlueColor,
-                                fontSize = font12
-                            )
-                        } else {
-                            TextStyle(
-                                fontFamily = readexProFontFamily(),
-                                fontWeight = FontWeight.Light,
-                                color = PrimaryBlueColor,
-                                fontSize = font12
-                            )
-                        }
+                        item.label,
+                        style = TextStyle(
+                            fontFamily = readexProFontFamily(),
+                            fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Light,
+                            color = PrimaryBlueColor,
+                            fontSize = font12
+                        )
                     )
                 },
-
                 selected = isSelected,
                 onClick = {
                     if (!isSelected) {
-                        navController.navigate(item.route.route) {
+                        navController.navigate(item.route) {
                             launchSingleTop = true
                             restoreState = true
                         }
                     }
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    indicatorColor = BottomNavBarIndicator // This is the selected item's background
-                ),
-
+                    indicatorColor = BottomNavBarIndicator
+                )
             )
         }
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable

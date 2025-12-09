@@ -4,31 +4,16 @@ package com.example.auction_kmp_project.presentation.navigation
 import kotlinx.serialization.Serializable
 
 sealed interface MainGraphRoutes {
-    val route: String
     @Serializable
-    data object Graph : MainGraphRoutes {
-        override val route = "graph"
-    }
-
+    data object Graph : MainGraphRoutes
     @Serializable
-    data object Explore : MainGraphRoutes {
-        override val route = "explore"
-    }
-
+    data object Explore : MainGraphRoutes
     @Serializable
-    data object Auctions : MainGraphRoutes {
-        override val route = "auctions"
-    }
-
+    data object Auctions : MainGraphRoutes
     @Serializable
-    data object Items : MainGraphRoutes {
-        override val route = "items"
-    }
-
+    data object Items : MainGraphRoutes
     @Serializable
-    data object Profile : MainGraphRoutes {
-        override val route = "profile"
-    }
+    data object Profile : MainGraphRoutes
 }
 
 

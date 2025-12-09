@@ -14,12 +14,11 @@ import com.example.auction_kmp_project.presentation.profile.ProfileScreen
 fun MainNavHost(navController: NavHostController, modifier: Modifier = Modifier) {
     NavHost(
         navController = navController,
-        startDestination = MainGraphRoutes.Explore.route,
+        startDestination = MainGraphRoutes.Graph ,
         modifier = modifier
     ) {
-        composable(MainGraphRoutes.Explore.route) { ExploreScreen(navController) }
-        composable(MainGraphRoutes.Auctions.route) { AuctionsScreen(navController) }
-        composable(MainGraphRoutes.Items.route) { ItemsScreen(navController) }
-        composable(MainGraphRoutes.Profile.route) { ProfileScreen(navController) }
+        mainGraph(
+            navController = navController
+        )
     }
 }
