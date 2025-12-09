@@ -36,7 +36,7 @@ fun AuctionsScreen(navController: NavController,exploreViewModel: ExploreViewMod
         SearchBar(
             searchedText = searchedText,
             onTextChanged = { newText -> searchedText = newText },
-            onSearch = { query -> }
+            onSearch = {}
         )
         AuctionTabBar(
             selectedTabIndex = selectedTab, tabs = listOf("Upcoming", "Ongoing", "Completed")
