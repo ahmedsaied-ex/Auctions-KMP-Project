@@ -8,6 +8,8 @@ import com.example.auction_kmp_project.presentation.auctions.components.Auctions
 import com.example.auction_kmp_project.presentation.explore.components.ExploreScreen
 import com.example.auction_kmp_project.presentation.items.components.ItemsScreen
 import com.example.auction_kmp_project.presentation.profile.ProfileScreen
+import com.example.auction_kmp_project.presentation.items.ItemsScreen
+import com.example.auction_kmp_project.presentation.profile.presentation.ProfileScreen
 
 
 fun NavGraphBuilder.mainGraph(navController: NavController) {
