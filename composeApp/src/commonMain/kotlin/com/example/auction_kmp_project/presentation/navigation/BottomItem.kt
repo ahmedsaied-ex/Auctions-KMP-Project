@@ -18,7 +18,7 @@ val bottomNavItems = listOf(
         Res.drawable.ic_explore_home_active,
         Res.drawable.ic_explore_home_inactive
     ),
-    BottomNavItem(MainGraphRoutes.Auctions, "Explore", Res.drawable.ic_auctions_active,Res.drawable.ic_auctions_inactive),
+    BottomNavItem(MainGraphRoutes.Auctions, "Auctions", Res.drawable.ic_auctions_active,Res.drawable.ic_auctions_inactive),
     BottomNavItem(MainGraphRoutes.Items, "Items", Res.drawable.ic_items_active,Res.drawable.ic_items_inactive),
     BottomNavItem(MainGraphRoutes.Profile, "Profile", Res.drawable.ic_profile_active,Res.drawable.ic_profile_inactive )
 )
