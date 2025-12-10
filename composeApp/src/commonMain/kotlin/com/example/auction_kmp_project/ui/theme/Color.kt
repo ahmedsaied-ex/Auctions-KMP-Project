@@ -23,6 +23,7 @@ val BidStatusText=Color(0xffE0DDEA)
 val MainBackgroundColor=Color(0xffF5F4F8)
 val AuctionItemCardBackgroundColor = Color(0xff00000000)
 val Black =Color(0xff000000)
+val BottomSheetBackground =Color(0xffF1EFF5)
 
 
 val CategoryItemSelectedBorderColor=Color(0xffF6BC9F)
@@ -33,7 +34,6 @@ val CategoryItemSelectedTextColor=Color(0xffA33E0A)
 val CategoryItemUnSelectedTextColor=Color(0xffEB6926)
 
 val WalletCardTextColor=Color(0xffFBDECF)
-
 
 
 
