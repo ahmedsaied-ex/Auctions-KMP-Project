@@ -8,11 +8,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import auctionkmpproject.composeapp.generated.resources.Res
+import auctionkmpproject.composeapp.generated.resources.Top_up_my_wallet
 import com.example.auction_kmp_project.helpers.FontSizes.font13
 import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.TimeBottomTextColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun DialogConfirmationButton(onClick:()->Unit) {
@@ -27,7 +30,7 @@ fun DialogConfirmationButton(onClick:()->Unit) {
         }
     ) {
         Text(
-            "TOP-UP MY WALLET",
+            stringResource(Res.string.Top_up_my_wallet),
             style = TextStyle(
                 color = PrimaryBlueColor,
                 fontWeight = FontWeight.SemiBold,

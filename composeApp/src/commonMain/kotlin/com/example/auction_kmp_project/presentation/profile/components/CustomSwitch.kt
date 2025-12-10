@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.profile.presentation
+package com.example.auction_kmp_project.presentation.profile.components
 
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults

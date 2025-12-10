@@ -29,7 +29,7 @@ import com.example.auction_kmp_project.ui.theme.UnselectedColor
 
 @Composable
 fun AuctionTabBar(
-    tabs: List<String> = listOf("Upcoming", "Ongoing", "Completed"),
+    tabs: List<String> ,
     selectedTabIndex: Int,
     onTabSelected: (Int) -> Unit
 ) {

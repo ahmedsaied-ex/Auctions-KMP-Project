@@ -19,6 +19,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.user
+import auctionkmpproject.composeapp.generated.resources.welcome_message
 import com.example.auction_kmp_project.domain.models.BottomSheetModel
 import com.example.auction_kmp_project.helpers.FontSizes.font13
 import com.example.auction_kmp_project.helpers.FontSizes.font16
@@ -33,6 +34,7 @@ import com.example.auction_kmp_project.ui.theme.PrimaryOrangeColor
 import com.example.auction_kmp_project.ui.theme.TimeCardTopBackgroundColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun BidItemRow(item: BottomSheetModel) {
@@ -104,4 +106,9 @@ fun BidItemRow(item: BottomSheetModel) {
             )
         }
     }
+}
+
+@Composable
+fun MyScreen() {
+    Text(stringResource(Res.string.welcome_message))
 }

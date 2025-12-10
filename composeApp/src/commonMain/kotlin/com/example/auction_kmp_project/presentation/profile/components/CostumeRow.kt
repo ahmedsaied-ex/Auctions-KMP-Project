@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.profile.presentation
+package com.example.auction_kmp_project.presentation.profile.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

@@ -19,7 +19,7 @@ val BottomNavBarIndicator =Color(0xE6E0DDEA)
 
 val LiveAuctionCardBidTextColor= Color(0xFFF6BC9F)
 val BidStatusText=Color(0xffE0DDEA)
-
+val LogoutTextColor=Color(0xFFC70000)
 val MainBackgroundColor=Color(0xffF5F4F8)
 val AuctionItemCardBackgroundColor = Color(0xff00000000)
 val Black =Color(0xff000000)
