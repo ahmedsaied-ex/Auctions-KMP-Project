@@ -8,9 +8,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import auctionkmpproject.composeapp.generated.resources.Res
+import auctionkmpproject.composeapp.generated.resources.VIEW_WALLET
 import com.example.auction_kmp_project.helpers.FontSizes.font13
 import com.example.auction_kmp_project.ui.theme.WalletCardButtonBackgroundColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
+import org.jetbrains.compose.resources.stringResource
 
 
 @Composable
@@ -24,7 +27,7 @@ fun WalletButton(onClick:()-> Unit) {
         ),
         content = {
             Text(
-                "VIEW WALLET", style = TextStyle(
+                stringResource(Res.string.VIEW_WALLET), style = TextStyle(
                     fontFamily = readexProFontFamily(),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = font13,
