@@ -21,8 +21,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.auction_card_image_test
+import auctionkmpproject.composeapp.generated.resources.endsIn
 import auctionkmpproject.composeapp.generated.resources.ic_home_calendar_auction_card
 import auctionkmpproject.composeapp.generated.resources.ic_items_auction_card
+import auctionkmpproject.composeapp.generated.resources.startsIn
 import com.example.auction_kmp_project.helpers.Sizes.Size10
 import com.example.auction_kmp_project.helpers.Sizes.Size12
 import com.example.auction_kmp_project.helpers.Sizes.Size14
@@ -34,6 +36,7 @@ import com.example.auction_kmp_project.domain.models.Staus
 import com.example.auction_kmp_project.ui.theme.BodyColor
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -98,7 +101,7 @@ fun AuctionTimeBanner(item: AuctionCardModel){
                 topTextColor = BodyColor,
                 bottomTextColor = PrimaryBlueColor,
                 bottomBackground = Color(0xffEBE9F1),
-                topText = "ends in",
+                topText = stringResource(Res.string.endsIn) ,
                 bottomText = item.auctionTime
             )
         }
@@ -108,7 +111,7 @@ fun AuctionTimeBanner(item: AuctionCardModel){
                 topTextColor = BodyColor,
                 bottomTextColor = PrimaryBlueColor,
                 bottomBackground = Color(0xffEBE9F1),
-                topText = "Start in",
+                topText = stringResource(Res.string.startsIn) ,
                 bottomText = item.auctionTime
             )
         }

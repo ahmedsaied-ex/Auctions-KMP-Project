@@ -70,9 +70,9 @@ fun AuctionItemCard(item: AuctionItemCardModel) {
 
                     TimeCard(
                         BidStatusText,
+                        topTextColor = BodyColor,
                         bottomTextColor = PrimaryBlueColor,
                         bottomBackground = TimeBottomTextColor,
-                        topTextColor = BodyColor,
                         topText = item.status,
                         bottomText = item.remainTime
                     )

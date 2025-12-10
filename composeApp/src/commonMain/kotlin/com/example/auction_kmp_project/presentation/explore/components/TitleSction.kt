@@ -15,18 +15,20 @@ import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.PrimaryOrangeColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
+import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 
 @Preview(showBackground = true)
 @Composable
-fun TitleSection(title: String ,onClick:()->Unit={} ) {
+fun TitleSection(title: StringResource, onClick: () -> Unit ={} ) {
     Row(
         Modifier.fillMaxWidth().padding(horizontal = Size16),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Text(
-            title,
+            stringResource(title) ,
             color = PrimaryBlueColor,
             fontSize = font16,
             fontFamily = readexProFontFamily(),
