@@ -12,11 +12,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.joined_auctions
+import auctionkmpproject.composeapp.generated.resources.view
 import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.helpers.Sizes.Size30
 import com.example.auction_kmp_project.helpers.Sizes.Size8
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -38,9 +40,9 @@ fun JoinedAuctionBanner(onClick:()-> Unit) {
                 contentDescription = "joined auctions"
             )
             JoinedAuctionBannerDataColumn(
-                joinedAuctionsTitle = "Joined Explore",
+                joinedAuctionsTitle = stringResource(Res.string.joined_auctions),
                 joinedAuctionsNumber = "5",
-                buttonText = "VIEW",
+                buttonText = stringResource(Res.string.view),
             ) {onClick()}
         }
 

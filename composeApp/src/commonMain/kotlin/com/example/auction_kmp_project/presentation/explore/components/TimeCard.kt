@@ -12,17 +12,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.auction_kmp_project.helpers.FontSizes.font10
 import com.example.auction_kmp_project.helpers.FontSizes.font8
 import com.example.auction_kmp_project.helpers.Sizes.Size12
 import com.example.auction_kmp_project.helpers.Sizes.Size18
 import com.example.auction_kmp_project.helpers.Sizes.Size6
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
+
 
 @Composable
 fun TimeCard(
@@ -47,7 +45,7 @@ fun TimeCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = topText,
+                text = topText ,
                 color = topTextColor,
                 fontSize = font8,
                 lineHeight = font8,

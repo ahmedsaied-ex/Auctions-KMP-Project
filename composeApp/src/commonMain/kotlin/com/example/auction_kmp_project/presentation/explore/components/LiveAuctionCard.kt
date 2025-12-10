@@ -22,6 +22,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.car
+import auctionkmpproject.composeapp.generated.resources.endsIn
+import auctionkmpproject.composeapp.generated.resources.t49m_33s
 import com.example.auction_kmp_project.helpers.Sizes.Size10
 import com.example.auction_kmp_project.helpers.Sizes.Size12
 import com.example.auction_kmp_project.helpers.Sizes.Size20
@@ -34,6 +36,7 @@ import com.example.auction_kmp_project.ui.theme.TimeCardTopBackgroundColor
 import com.example.auction_kmp_project.ui.theme.TimeCardbottomBackgroundColor
 import com.example.auction_kmp_project.ui.theme.TimeTopTextColor
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Preview(showBackground = true)
@@ -89,8 +92,8 @@ fun LiveAuctionCard(modifier: Modifier) {
                         topTextColor = TimeTopTextColor,
                         bottomTextColor = TimeBottomTextColor,
                         bottomBackground = TimeCardbottomBackgroundColor,
-                        topText = "Ends in",
-                        bottomText = "49m 33s"
+                        topText = stringResource( Res.string.endsIn),
+                        bottomText = stringResource(Res.string.t49m_33s)
                     )
 
                 }

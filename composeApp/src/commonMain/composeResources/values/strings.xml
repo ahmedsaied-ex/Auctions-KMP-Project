@@ -1,9 +1,33 @@
 <resources>
+    <string name="app_name">Auction App</string>
+    <string name="welcome">Welcome</string>
+    <string name="explore">Explore</string>
+    <string name="categories">Categories</string>
+    <string name="upcomingExplore">Upcoming Explore</string>
+    <string name="ongoingExplore">Ongoing Explore</string>
+    <string name="viewAll">View All</string>
+    <string name="joined_auctions">Joined Explore</string>
+    <string name="view">View</string>
+    <string name="auctions">Auctions</string>
+    <string name="items">Items</string>
+    <string name="endsIn">Ends in</string>
+    <string name="startsIn">Starts in</string>
+    <string name="t49m_33s">49m 33s</string>
+    <string name="liveBidding">Live bidding</string>
+    <string name="your_bid">Your bid: </string>
+    <string name="current_bid"> Current bid </string>
+    <string name="currency_symbol">SR </string>
+    <string name="live_auction_card_title">  2021 Ford F-150 </string>
+    <string name="search">Search for auctions</string>
+    <string name="cars">Cars</string>
+    <string name="mazad">Cars Mazad</string>
+    <string name="ash_sharqiyah">Ash Sharqiyah</string>
+    <string name="minimumBid">Minimum bid</string>
+
     <string name="welcome_message">Welcome to our app!</string>
     <string name="app_title">My Application</string>
 
     <string name="account_info">Account info</string>
-    <string name="joined_auctions">Joined auctions</string>
 
     <string name="preferences">Preferences</string>
 
@@ -28,6 +52,8 @@
     <string name="CANCEL">CANCEL</string>
     <string name="insufficient_funds">Insufficient Funds</string>
     <string name="dialog_content">You don't have enough funds in your wallet to continue bidding in this auction. To continue bidding, you must add funds to your wallet.</string>
+
+
 
 
 </resources>
