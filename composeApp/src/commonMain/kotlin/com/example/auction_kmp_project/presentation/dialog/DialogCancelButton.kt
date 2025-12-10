@@ -6,14 +6,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import auctionkmpproject.composeapp.generated.resources.CANCEL
+import auctionkmpproject.composeapp.generated.resources.Res
 import com.example.auction_kmp_project.helpers.FontSizes.font13
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun DialogCancelButton(onClick: () -> Unit) {
     Text(
-        "CANCEL",
+        stringResource(Res.string.CANCEL),
         modifier = Modifier.clickable { onClick()},
         style = TextStyle(
             color = PrimaryBlueColor,

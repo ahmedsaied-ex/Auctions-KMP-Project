@@ -1,4 +1,4 @@
-package com.example.auction_kmp_project.presentation.profile.presentation
+package com.example.auction_kmp_project.presentation.profile.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -10,7 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import auctionkmpproject.composeapp.generated.resources.Res
 import auctionkmpproject.composeapp.generated.resources.ic_arrow
-import com.example.auction_kmp_project.presentation.profile.presentation.utils.RawType
+import com.example.auction_kmp_project.presentation.profile.components.utils.RawType
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

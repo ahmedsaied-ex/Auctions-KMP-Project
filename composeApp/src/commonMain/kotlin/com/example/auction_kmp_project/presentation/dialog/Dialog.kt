@@ -13,9 +13,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.window.Dialog
+import auctionkmpproject.composeapp.generated.resources.Res
+import auctionkmpproject.composeapp.generated.resources.dialog_content
+import auctionkmpproject.composeapp.generated.resources.insufficient_funds
 import com.example.auction_kmp_project.helpers.Sizes.Size12
 import com.example.auction_kmp_project.helpers.Sizes.Size16
 import com.example.auction_kmp_project.helpers.Sizes.Size24
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -35,9 +39,9 @@ fun SimpleDialogDemo(showDialog: MutableState<Boolean>,onClick:()->Unit) {
                 ) {
                     DialogImage()
                     Spacer(Modifier.height(Size16))
-                    DialogTitle("Insufficient Funds")
+                    DialogTitle(stringResource(Res.string.insufficient_funds))
                     Spacer(Modifier.height(Size16))
-                    DialogMainMessage("You don't have enough funds in your wallet to continue bidding in this auction. To continue bidding, you must add funds to your wallet.")
+                    DialogMainMessage(stringResource(Res.string.dialog_content))
                     Spacer(Modifier.height(Size24))
                     DialogButtonsRow(
                         showDialog = showDialog
