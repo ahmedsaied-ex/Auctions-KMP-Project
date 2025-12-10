@@ -15,7 +15,9 @@ fun NavGraphBuilder.mainGraph(navController: NavController) {
         startDestination = MainGraphRoutes.Explore,
     ) {
         composable<MainGraphRoutes.Explore> {
-            ExploreScreen(navController)
+            ExploreScreen(
+                navController,
+            )
         }
         composable<MainGraphRoutes.Auctions> {
             AuctionsScreen(navController)

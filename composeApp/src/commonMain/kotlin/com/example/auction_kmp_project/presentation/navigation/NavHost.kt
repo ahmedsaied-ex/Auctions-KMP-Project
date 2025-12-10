@@ -6,14 +6,17 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 
 @Composable
-fun MainNavHost(navController: NavHostController, modifier: Modifier = Modifier) {
+fun MainNavHost(
+    navController: NavHostController,
+    modifier: Modifier = Modifier,
+) {
     NavHost(
         navController = navController,
         startDestination = MainGraphRoutes.Graph ,
         modifier = modifier
     ) {
         mainGraph(
-            navController = navController
+            navController = navController,
         )
     }
 }
