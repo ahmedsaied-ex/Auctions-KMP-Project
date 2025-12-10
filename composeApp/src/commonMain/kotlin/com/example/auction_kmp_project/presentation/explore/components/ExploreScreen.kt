@@ -16,10 +16,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color.Companion.Transparent
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Transparent
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import auctionkmpproject.composeapp.generated.resources.Res
+import auctionkmpproject.composeapp.generated.resources.categories
+import auctionkmpproject.composeapp.generated.resources.ongoingExplore
+import auctionkmpproject.composeapp.generated.resources.upcomingExplore
 import com.example.auction_kmp_project.data.dummyData.BottomSheet
 import com.example.auction_kmp_project.helpers.Sizes.Size10
 import com.example.auction_kmp_project.helpers.Sizes.Size12
@@ -76,7 +81,7 @@ fun ExploreScreen(navController: NavController, exploreViewModel: ExploreViewMod
         item { LiveAuctionCardList() }
         item { Spacer(modifier = Modifier.height(Size40)) }
         item {
-            TitleSection("Categories") {
+            TitleSection(Res.string.categories) {
                 showDialog.value = true
             }
             SimpleDialogDemo(showDialog = showDialog){
@@ -86,7 +91,7 @@ fun ExploreScreen(navController: NavController, exploreViewModel: ExploreViewMod
         item { Spacer(modifier = Modifier.height(Size12)) }
         item { CategoryCardsList(categories) }
         item { Spacer(modifier = Modifier.height(Size40)) }
-        item { TitleSection("Upcoming Explore"){ scope.launch {
+        item { TitleSection(Res.string.upcomingExplore){ scope.launch {
             isSheetVisible.value = true
             sheetState.show()
         }}
@@ -96,7 +101,7 @@ fun ExploreScreen(navController: NavController, exploreViewModel: ExploreViewMod
             auctions = upComingAuctions
         ) }
         item { Spacer(modifier = Modifier.height(Size40)) }
-        item { TitleSection("Ongoing Explore") }
+        item { TitleSection(Res.string.ongoingExplore) }
         item { Spacer(modifier = Modifier.height(Size14)) }
         item { AuctionsList(
             auctions = ongoingAuctions

@@ -39,6 +39,8 @@ import com.example.auction_kmp_project.ui.theme.TimeCardTopBackgroundColor
 import com.example.auction_kmp_project.ui.theme.TimeCardbottomBackgroundColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
+
 @Composable
 fun SearchTextField(
     searchedText: String,
@@ -105,7 +107,7 @@ fun SearchTextField(
                         // PLACEHOLDER
                         if (searchedText.isEmpty()) {
                             Text(
-                                "Search for auctions",
+                                stringResource(Res.string.search),
                                 style = TextStyle(
                                     fontSize = font13,
                                     color = TimeCardTopBackgroundColor,

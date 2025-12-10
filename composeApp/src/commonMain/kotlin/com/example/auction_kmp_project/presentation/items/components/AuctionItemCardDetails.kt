@@ -22,8 +22,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import auctionkmpproject.composeapp.generated.resources.Res
+import auctionkmpproject.composeapp.generated.resources.ash_sharqiyah
+import auctionkmpproject.composeapp.generated.resources.cars
+import auctionkmpproject.composeapp.generated.resources.currency_symbol
 import auctionkmpproject.composeapp.generated.resources.ic_calendar_auction_card
 import auctionkmpproject.composeapp.generated.resources.ic_time_auction_card
+import auctionkmpproject.composeapp.generated.resources.mazad
+import auctionkmpproject.composeapp.generated.resources.minimumBid
 import com.example.auction_kmp_project.domain.models.AuctionItemCardModel
 import com.example.auction_kmp_project.helpers.FontSizes.font10
 import com.example.auction_kmp_project.helpers.FontSizes.font16
@@ -38,6 +43,7 @@ import com.example.auction_kmp_project.ui.theme.JoinedBannerText
 import com.example.auction_kmp_project.ui.theme.LiveAuctionCardBidTextColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun AuctionItemCardDetails(item: AuctionItemCardModel) {
@@ -58,7 +64,7 @@ fun AuctionItemCardDetails(item: AuctionItemCardModel) {
 
         Row {
             Text(
-                text = "Cars",
+                text = stringResource(Res.string.cars),
                 fontSize = font10,
                 lineHeight = font10,
                 fontFamily = readexProFontFamily(),
@@ -74,7 +80,7 @@ fun AuctionItemCardDetails(item: AuctionItemCardModel) {
                 modifier = Modifier.padding(horizontal = Size4)
             )
             Text(
-                text = "Cars Mazad",
+                text = stringResource(Res.string.mazad),
                 fontSize = font10,
                 lineHeight = font10,
 
@@ -90,7 +96,7 @@ fun AuctionItemCardDetails(item: AuctionItemCardModel) {
                 modifier = Modifier.padding(horizontal = Size4)
             )
             Text(
-                text = "Ash Sharqiyah",
+                text = stringResource(Res.string.ash_sharqiyah),
                 fontSize = font10,
                 lineHeight = font10,
 
@@ -147,7 +153,7 @@ fun AuctionItemCardDetails(item: AuctionItemCardModel) {
 
             Column {
                 Text(
-                    text = "Minimum bid",
+                    text = stringResource(Res.string.minimumBid),
                     lineHeight = font10,
                     color = White,
                     fontFamily = readexProFontFamily(),
@@ -155,7 +161,7 @@ fun AuctionItemCardDetails(item: AuctionItemCardModel) {
                 )
                 Row {
                     Text(
-                        text = "SR ",
+                        text = stringResource(Res.string.currency_symbol),
                         fontSize = font20,
                         fontFamily = readexProFontFamily(),
                         color = LiveAuctionCardBidTextColor

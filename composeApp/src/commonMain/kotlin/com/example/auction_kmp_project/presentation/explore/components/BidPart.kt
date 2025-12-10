@@ -18,6 +18,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import auctionkmpproject.composeapp.generated.resources.Res
+import auctionkmpproject.composeapp.generated.resources.currency_symbol
+import auctionkmpproject.composeapp.generated.resources.current_bid
+import auctionkmpproject.composeapp.generated.resources.liveBidding
+import auctionkmpproject.composeapp.generated.resources.live_auction_card_title
+import auctionkmpproject.composeapp.generated.resources.your_bid
 import com.example.auction_kmp_project.helpers.FontSizes.font10
 import com.example.auction_kmp_project.helpers.FontSizes.font16
 import com.example.auction_kmp_project.helpers.FontSizes.font20
@@ -32,6 +38,7 @@ import com.example.auction_kmp_project.ui.theme.BidStatusText
 import com.example.auction_kmp_project.ui.theme.DeletedColor
 import com.example.auction_kmp_project.ui.theme.LiveAuctionCardBidTextColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun BidPart() {
@@ -47,7 +54,7 @@ fun BidPart() {
 
         ) {
             Text(
-                text = "Live bidding",
+                text = stringResource(Res.string.liveBidding),
                 color = Color.White,
                 fontSize = font10,
                 lineHeight = font10,
@@ -60,7 +67,7 @@ fun BidPart() {
         Spacer(modifier = Modifier.height(Size6))
 
         Text(
-            text = "2021 Ford F-150",
+            text = stringResource(Res.string.live_auction_card_title),
             lineHeight = font16,
             color = Color.White,
             fontSize = font16,
@@ -71,7 +78,7 @@ fun BidPart() {
 
         Row {
             Text(
-                text = "Your bid: ",
+                text = stringResource(Res.string.your_bid),
                 fontWeight = FontWeight.Light,
 
                 color = BidStatusText,
@@ -93,7 +100,7 @@ fun BidPart() {
         Spacer(modifier = Modifier.height(Size12))
 
         Text(
-            text = "Current bid",
+            text = stringResource(Res.string.current_bid),
             color = BidStatusText,
             fontSize = font10,
             lineHeight = font10,
@@ -106,7 +113,7 @@ fun BidPart() {
 
         Row {
             Text(
-                text = "SR ",
+                text = stringResource(Res.string.currency_symbol),
                 color = Color(0xFFF6BC9F),
                 fontSize = font20,
                 lineHeight = font20,

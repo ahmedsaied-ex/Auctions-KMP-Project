@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import auctionkmpproject.composeapp.generated.resources.Res
+import auctionkmpproject.composeapp.generated.resources.explore
 import auctionkmpproject.composeapp.generated.resources.ic_notification_app_bar
 import auctionkmpproject.composeapp.generated.resources.ic_search_app_bar
 import com.example.auction_kmp_project.helpers.FontSizes.font20
@@ -21,6 +22,7 @@ import com.example.auction_kmp_project.helpers.Sizes.Size24
 import com.example.auction_kmp_project.ui.theme.PrimaryBlueColor
 import com.example.auction_kmp_project.ui.theme.readexProFontFamily
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Preview(showBackground = true)
@@ -31,7 +33,7 @@ fun ExploreAppBar() {
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Text(
-            "Explore",
+            stringResource(Res.string.explore),
             fontSize = font20,
             color = PrimaryBlueColor,
             fontFamily = readexProFontFamily(),
