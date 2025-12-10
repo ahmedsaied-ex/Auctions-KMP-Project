@@ -17,12 +17,9 @@ class BottomSheetViewModel(
     init {
         loadAll()
     }
-
     private fun loadAll() {
         viewModelScope.launch {
             _items.value = getItems()
-
-
         }
     }
 }

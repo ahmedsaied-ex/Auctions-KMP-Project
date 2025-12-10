@@ -21,7 +21,6 @@ import com.example.auction_kmp_project.data.dummyData.Categories.categoriesList
 import com.example.auction_kmp_project.helpers.Sizes.Size8
 import com.example.auction_kmp_project.presentation.auctions.components.CategoryChipsRow
 import com.example.auction_kmp_project.presentation.auctions.components.SearchBar
-import com.example.auction_kmp_project.presentation.explore.viewModel.ExploreViewModel
 import com.example.auction_kmp_project.presentation.items.viewModel.ItemsViewModel
 import org.koin.compose.koinInject
 

@@ -11,7 +11,6 @@ object BottomSheet {
             "Aonymous Bidder", null, " 232,000", "24 May, 2023 at 1:05:30 PM", isAnonymous = true
         ),
         BottomSheetModel("Hazem Elwakil", "HE", " 230,500", "24 May, 2023 at 1:01:30 PM"),
-    
 
     )
 
