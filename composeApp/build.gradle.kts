@@ -56,7 +56,8 @@ kotlin {
             implementation(libs.ktor.client.serialization)
             implementation(libs.ktor.client.logging)
             implementation(compose.components.resources)
-
+            implementation(libs.moko.resources)
+            implementation(libs.moko.resources.compose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
